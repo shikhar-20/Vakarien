@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Support</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+    	function submit(){
+    		var form=true;
+    		var f_name=document.getElementById("first_name").value;
+    		if(f_name==""){
+    			document.getElementById("text_warning1").style.display="block";
+                document.getElementById("first_name").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			document.getElementById("text_warning1").style.display="none";
+                document.getElementById("first_name").style.border="none";
+    		}
+
+    		var l_name=document.getElementById("last_name").value;
+    		if(l_name==""){
+    			document.getElementById("text_warning2").style.display="block";
+                document.getElementById("last_name").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			document.getElementById("text_warning2").style.display="none";
+                document.getElementById("last_name").style.border="none";
+    		}
+
+    		var mail=document.getElementById("mail").value;
+    		if(mail==""){
+    			document.getElementById("text_warning3").style.display="block";
+                document.getElementById("mail").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			var i=0;
+	    		var len=mail.length;
+	    		var valid_email=false;
+	    		while(i<len){
+	    			if(mail[i]=="@"){
+	    				valid_email=true;
+	    				break;
+	    			}
+	    			i=i+1;
+	    		}
+	    		if(valid_email==false){
+	    			document.getElementById("text_warning6").style.display="block";
+	    			document.getElementById("text_warning3").style.display="none";
+                    document.getElementById("mail").style.border=" 0.5px solid #9c4668";
+	    			form=false;
+	    		}
+	    		else {
+	    			document.getElementById("text_warning6").style.display="none";
+                    document.getElementById("mail").style.border="none";
+	    		}
+    		}
+
+    		var number=document.getElementById("mobile_number").value;
+    		if(number==""){
+    			document.getElementById("text_warning4").style.display="block";
+                document.getElementById("mobile_number").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			i=0;
+	    		len=number.length;
+	    		if(len!=10){
+	    			document.getElementById("text_warning7").style.display="block";
+	    			document.getElementById("text_warning4").style.display="none";
+                    document.getElementById("mobile_number").style.border=" 0.5px solid #9c4668";
+	    			form=false;
+	    		}
+	    		else {
+	    			var valid_number=false;
+		    		while(i<len){
+		    			if(number.charCodeAt(i)<48 || number.charCodeAt(i)>57){
+		    				document.getElementById("text_warning7").style.display="block";
+		    				document.getElementById("text_warning4").style.display="none";
+                            document.getElementById("mobile_number").style.border=" 0.5px solid #9c4668";
+
+                            form=false;
+		    				break;
+		    			}
+		    			else {
+		    				document.getElementById("text_warning7").style.display="none";
+                            document.getElementById("mobile_number").style.border="none";
+		    			}
+		    			i=i+1;
+		    		}
+	    		}
+    		}
+
+
+    		var des=document.getElementById("description").value;
+    		if(des==""){
+    			document.getElementById("text_warning5").style.display="block";
+                document.getElementById("description").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			document.getElementById("text_warning5").style.display="none";
+                document.getElementById("description").style.border="none";
+    		}
+
+    		if(form==true){
+
+    			if(confirm("Are you sure to submit")){
+    				alert("Thanks for Submitting!! We will revert You back on email..!!");
+    				location.reload();
+    			}
+    			
+
+    		}
+
+    		
+
+    	}
+    </script>
+	<style>
+		#header_image{
+			margin-top: 20px;
+			height:70px;
+			width:200px;
+		}
+        html{
+            scroll-behavior: smooth;
+        }
+		body{
+			overflow-x: hidden;
+		}
+		::-webkit-scrollbar {
+          width: 11px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1; 
+          border-radius: 10px;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #888; 
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+		#form{
+			background-color:  #f1f1f1;
+			width:100vw;
+			height:100%;
+			display:flex;
+		}
+		#submit_form{
+			height:40px;
+			width:130px;
+			color: white;
+			background-color: #0c1027;
+			border-radius: 20px;
+			border:none;
+			margin-top: 20px;
+			font-weight: 550;
+            transition-duration: 0.5s;
+
+		}
+        #submit_form:hover{
+            cursor:pointer;
+            background-color: #9c4668;
+        }
+		#contact_home{
+			font-family: calibri;
+			font-size:22px;
+			color:#9c4668;
+			font-weight:550;
+		}
+
+		#search_icon{
+			margin-left: -32px;
+			height:25px;
+			width:25px;
+			/*font-family: calibri;*/
+			/*font-size:25px;*/
+		}
+		#form_section{
+			font-family: calibri;
+			width:55%;
+			margin-left: 25px;
+			color:#0c1027;
+		}
+		.form_label{
+			font-size: 18px;
+		}
+		.form_input{
+			width:100%;
+			height:35px;
+			border-radius: 15px;
+			border:none;
+			margin-top: -15px;
+		}
+		.star_mandatory{
+			color:#9c4668;
+
+		}
+		#form_side_bar{
+			margin-left: 40px;
+			width:35%;
+			color:#0c1027;
+			font-family: calibri;
+			
+		}
+		
+		*:focus{
+			outline:none;
+		}
+		.small_text_form{
+			color:#9c4668;
+		}
+		#footer{
+            width:100%;
+            background-color: #f1f1f1;
+            height:60%;
+            display:flex;
+            font-family: calibri;
+            margin-top: -20px;
+        }
+        #first_footer{
+            width:40%;
+            margin-left: 80px;
+            margin-top: 25px;
+            margin:;
+            height:100%;
+        }
+        #second_footer{
+            margin-top: 25px;
+            margin-left: 30px;
+            width:30%;
+            height:100%;
+        }
+        .footer_button{
+            height:35px;
+            font-size: 15px;
+            font-weight:550;
+            color:#0c1027;
+            width:30%;
+            border-color: #0c1027;
+            background-color: white;
+            border-radius: 10px;
+            transition-duration: 1s;
+        }
+        .footer_button:hover{
+            background-color: #9c4668;
+            cursor: pointer;
+        }
+        .small_text_footer{
+            color:#9c4668;
+            font-family: calibri;
+        }
+        #contact_icons{
+            margin-top: 40px;
+            font-size: 20px;
+        }
+        #contact_icon{
+            margin-right: 15px;
+            color:#0c1027;
+            transition-duration: 1s;
+        }
+        #contact_icon:hover{
+            color:#9c4668;
+        }
+        .link_footer{
+            text-decoration: none;
+        }
+        .text_warning{
+        	color:#9c4668;
+        	margin-top:0px;
+        	display: none;
+        }
+        #description{
+            resize:vertical;
+        }
+        @media screen and (max-width: 950px){
+        	#form{
+        		display:block;
+        	}
+        	#form_section{
+        		width:100%;
+        	}
+        	#form_side_bar{
+        		width:90%;
+        	}
+            #footer_image{
+                display: none;
+            }
+            #footer_vakarien{
+                display: flex;
+            }
+            .form_input{
+            	width:90%;
+            }
+            #first_footer{
+                width:100%;
+                margin-left: 15px;
+            }
+            #second_footer{
+                width:100%;
+                margin-left: 15px;
+                margin-top: 0px;
+            }
+            .small_text_footer{
+                margin-right: 10px;
+                margin-top: -19px;
+            }
+            #footer{
+                display: block;
+            }
+            .footer_button{
+                margin-top: -10px;
+            }
+
+        }
+        @media only screen and (max-width: 550px){
+            #form_section{
+                margin-left:4px;
+            }
+            .footer_button{
+                height:39px;
+            }
+            #form_side_bar{
+                margin-left: 4px;
+            }
+        }
+	</style>
+</head>
+<body>
+	<!--header-->
+	<div style="width:100vw;text-align: center">
+		<img src="./images/vakarien.jpg" id="header_image">
+		<br>
+		
+	</div>
+	<div>
+			<a href="VAKARIEN.html" style="text-decoration: none"><span id="contact_home">Home</span></a><span id="contact_home" style="color:#0c1027;font-size:18px">>Submit Query</span>
+			
+		</div>
+	<!--form-->
+	<div id="form" >
+		<div id="form_section">
+			<h3 class="form_label">First Name<span class="star_mandatory">*</span></h3>
+			<input type="text" class="form_input" id="first_name" required>
+			<h6 class="text_warning" id="text_warning1">This field cannot be left empty!!</h6>
+
+			<h3 class="form_label">Last Name<span class="star_mandatory">*</span></h3>
+			<input type="text" class="form_input" id="last_name" required>
+			<h6 class="text_warning" id="text_warning2">This field cannot be left empty!!</h6>
+
+			<h3 class="form_label">Email<span class="star_mandatory">*</span></h3>
+			<input type="email" class="form_input" id="mail" required>
+			<h6 class="text_warning" id="text_warning3">This field cannot be left empty!!</h6>
+			<h6 class="text_warning" id="text_warning6">Please include an '@' in the email address</h6>
+
+			<h3 class="form_label">Mobile Number<span class="star_mandatory">*</span></h3>
+			<input type="text" class="form_input" maxlength="10" id="mobile_number" required>
+			<h6 class="text_warning" id="text_warning4">This field cannot be left empty!!</h6>
+			<h6 class="text_warning" id="text_warning7">Mobile Number entered is not valid!!</h6>
+
+			<h3 class="form_label">Description<span class="star_mandatory">*</span></h3>
+			<textarea class="form_input"  id="description" style="height:300px"></textarea>
+			<h6 class="text_warning" id="text_warning5">This field cannot be left empty!!</h6>
+
+			<div style="width:100%;text-align: center">
+				<button id="submit_form" onclick="submit()" type="submit">
+					SUBMIT
+				</button>
+			</div>
+		</div>
+
+		<!--introduction-->
+		<div id="form_side_bar">
+			<h2 data-aos="fade-up" data-aos-duration="3000">Welcome!</h2>
+			<h4 class="small_text_form" data-aos="fade-up" data-aos-duration="3000">Your queries are very much important to us..!! So, Don't hesitate to tell us..!!</h4>
+
+			<h3 data-aos="fade-up" data-aos-duration="3000">Call:</h3>
+			<h4 class="small_text_form" data-aos="fade-up" data-aos-duration="3000">To speak to a client success specialist, call 123-123-123-1. We're available Monday-Friday from 5 a.m. to 5 p.m. EST.</h4>
+
+			<h3 data-aos="fade-up" data-aos-duration="3000">Job Posting Standards:</h3>
+			<h4 class="small_text_form" data-aos="fade-up" data-aos-duration="3000">We work to deliver the best job seeker experience and are committed to job posting standards that support the job seeker. We recognize that there are meaningful differences between particular industries and markets and strive to reflect those differences in our implementation of these standards. 
+				<br><br>
+			Jobs that do not meet our standards may be subject to review and require additional information from the hiring company. Listings that prove misleading, compromise the job seeker experience or those which we are not convinced represent a "real" job may be removed from search results altogether. 
+							<br><br>
+			Failure to adhere to these guidelines may impact job visibility on the site. </h4>
+
+			<h3 data-aos="fade-up" data-aos-duration="3000">How to add users and set access levels</h3>
+						<h4 class="small_text_form" data-aos="fade-up" data-aos-duration="3000">Add users to give multiple people access to your organization's Vakarien account. Users get their own login and you can control what users can see and do on Vakarien by setting their access levels.</h4>
+			
+		</div>
+	</div>
+	<!--footer-->
+    <div id="footer">
+        <div id="first_footer">
+            <h1 style="font-size: 35px;">We're here to help</h1>
+            <h4 style="color:#9c4668">Visit our Help Center for answers to common questions or contact us directly.</h4>
+            <a href="./feedback/index.html" ><button class="footer_button">Feedback</button></a>
+            <a href="Contact_support.html" ><button class="footer_button" style="margin-left: 20px">Contact Support</button></a>
+            <br>
+            <div style="display:inline-block">
+                <h1>Solution</h1>
+                <a href="Review_story.html" class="link_footer"><h4 class="small_text_footer">Reviews</h4></a>
+                <a href="resume_builder.html" class="link_footer"><h4 class="small_text_footer">Resume</h4></a>
+            </div>
+            <div style="display: inline-block;margin-left: 20px">
+                <h1>Resources</h1>
+                <a href="How_it_works.html" class="link_footer"><h4 class="small_text_footer">How it works</h4></a>
+                <a href="FAQ.html" class="link_footer"><h4 class="small_text_footer">FAQ</h4></a>
+            </div> 
+        </div>
+        <div id="second_footer">
+            
+            <h1>Vakarien</h1>
+            <div id="footer_vakarien">
+                <a href="Open_jobs_Vakarien.html#job_heading" class="link_footer"><h4 class="small_text_footer">Why Vakarien</h4></a>
+                <a href="meet_founders.html" class="link_footer"><h4 class="small_text_footer">Meet The Founders</h4></a>
+                <a href="Failed.html" class="link_footer"><h4 class="small_text_footer">Cookies& privacy</h4></a>
+                </div>
+                <a href="Donate_us.html" ><button class="footer_button">Donate Us</button></a>
+            
+            <div id="contact_icons">
+                <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjlgeDorbzwAhVPDCsKHVF8BJIYABAAGgJzZg&ae=2&ohost=www.google.com&cid=CAESQOD2jimxu7s00ezwY1HM_qBD0C7yH-6Ezk32Mn55FpiS8HLHplRfnSTcs-DkW3zfUdKXhPzSWT5JIjTh7TRHTPY&sig=AOD64_2V5kLYi7mDRCGZIpV5Ww7Q2ntx7Q&q&adurl&ved=2ahUKEwidmtjorbzwAhW0heYKHZaRCQEQ0Qx6BAgGEAE" class="link_footer"><i  id="contact_icon" class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" class="link_footer"><i  id="contact_icon" class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="link_footer"><i  id="contact_icon" class="fab fa-linkedin"></i></a>
+                <a href="https://www.apple.com/in/" class="link_footer"><i  id="contact_icon" class="fab fa-apple"></i></a>
+                <a href="https://twitter.com/?lang=en" class="link_footer"><i  id="contact_icon" class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div style="margin-left: -180px">
+            <img src="./images/footer_human.png" id="footer_image" >
+            
+        </div>
+
+    </div>
+</body>
+<script>
+	 AOS.init();
+</script>
+<script >
+        $(document).ready(function(){
+            $(document).bind("contextmenu",function(e){
+  return false;
+    });
+        })
+    </script>
+</html>

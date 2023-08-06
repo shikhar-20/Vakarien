@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Meet the founders
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script >
+        $(document).ready(function(){
+            
+            $("#navigation_button").click(function(){
+                $("#show_navigation_buttons").toggle();
+                $("navigation_button").css("border","none");
+                
+            });
+        </script>
+    <style type="text/css">
+        body{
+            overflow-x: hidden; 
+        }
+
+        #show_navigation_buttons{
+            width:100%;
+            height:100%;
+            background-color:#0c1027;
+
+            color:#9c4668;
+            font-family: calibri;
+            font-size:30px;
+            display: none;
+            line-height: 20px;
+            text-align: center;
+            margin-top: -20px;
+            position: fixed;
+            z-index:9;
+        }
+        .navigation_bar_list{
+            transition-duration: 1s;
+            color:#9c4668;
+        }
+        .navigation_bar_list:hover{
+            color:white;
+            
+        }
+        #home_name_website{
+            text-decoration: none;
+            padding-top:20px;
+            /color: transparent;/
+            color: #0c1027;
+            font-size:25px;
+            font-family: calibri;
+            animation-name:website_name;
+            animation-iteration-count:1;
+            animation-duration:15s;
+            padding-left: 8%;
+            position: fixed;
+            -webkit-text-stroke:0.5px #0c1027;
+            /padding-right:210px;/
+
+        }
+        #home_header_space{
+            height:120px;
+            width:100%;
+            background-color: white;
+            margin-top:-57px;
+            display:flex;
+            position: fixed;
+           
+            z-index: 10;
+        }
+        #home_name_all{
+            display:flex;
+            margin-left: 45%;
+            padding-top: 38px;
+            font-size:21px;
+            font-weight: 600;
+            color:#0c1027;
+            font-family: calibri;
+            justify-content: space-around;
+            list-style-type: none;
+            width:50%;
+            position: absolute;
+        }
+        @keyframes website_name{
+            0%{
+                color:#0c1027;
+                 
+                clip-path: polygon(0% 100%, 0% 90%, 14% 87%, 26% 92%, 42% 87%, 52% 90%, 69% 93%, 79% 87%, 92% 92%, 100% 100%);
+            }
+            20%{
+                color:#0c1027;
+                 
+                clip-path: polygon(0% 100%, 0 79%, 8% 74%, 20% 82%, 33% 81%, 51% 86%, 67% 87%, 78% 81%, 100% 78%, 100% 100%);
+            }
+            40%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 55%, 16% 65%, 25% 73%, 40% 75%, 54% 69%, 68% 72%, 81% 65%, 100% 49%, 100% 100%);
+            }
+            60%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 50%, 13% 54%, 18% 49%, 29% 51%, 41% 49%, 56% 41%, 72% 34%, 100% 25%, 100% 100%);
+            }
+            80%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 21%, 16% 29%, 27% 31%, 43% 30%, 67% 14%, 84% 9%, 93% 7%, 100% 8%, 100% 100%);
+            }
+            100%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 0, 18% 0, 29% 0, 49% 0, 67% 0, 88% 0, 96% 0, 100% 0, 100% 100%);
+                -webkit-text-stroke:0px #0c1027;
+            }
+            
+        }
+        #navigation_bar{
+            display:none;
+            /outline:none;/
+
+        }
+        #set_sign_in{
+            width:100px;
+            color:white;
+            background-color: #0c1027;
+            height: 100px;
+            margin-top: -38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (max-width: 1050px) {
+            .set{
+                display: none;
+            }
+            #navigation_bar{
+                display: flex;
+                color:#0c1027;
+                justify-content: flex-end;
+            }
+            #set_sign_in{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 800px){
+            
+            #home_name_all{
+                position:sticky;
+                margin-left: 390px;
+            }
+             #navigation_bar{
+               /* position: fixed;*/
+            }
+
+        }
+        .link{
+            text-decoration: none;
+            color:#0c1027;
+            font-family: calibri;
+        }
+        .link:hover{
+            text-decoration: underline;
+        }
+        ::-webkit-scrollbar {
+          width: 11px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1; 
+          border-radius: 10px;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #888; 
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+
+        #head_sec{
+        background-color: #0c1027; 
+        height: 300px;
+
+        }
+        #meet_f{
+            color: white;
+            font-family: calibri;
+            font-size: 35px;
+            padding-top: 140px;
+            padding-left: 100px;
+
+        }
+        #found_{
+            padding-left: 100px;
+            font-family: calibri;
+            color: white;
+            margin-top: -25px;
+        }
+        .main_div{
+            background-color: white;
+            display: flex;
+            font-size: 18px;
+            font-family: calibri;
+            color: #0c1027;
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+
+        }
+        .ims{
+            height: 270px;
+            width: 220px;
+            margin-right: 10px;
+            margin-left: 30px; 
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        #varun1{
+            width: 46%;
+            height: 46%;
+            background-color: ;
+            margin-top: 30px;
+            margin-left: 35px;
+            display: flex;
+            box-shadow: 0 4px 8px 0 rgba(0.5, 0.5, 0.5, 0.5), 0 6px 20px 0 rgba(0.5, 0.5, 0.5, 0.5);
+            transition-duration: 1s;
+            border: 2px solid #0c1027;
+        }
+        #varun1:hover{
+            transform: scaleX(1.1) scaleY(1.1);
+
+        }
+
+        #riya{
+            width: 46%;
+            height: 46%
+            background-color: ;
+            margin-top: 30px;
+            margin-left: 35px;
+            display: flex;
+            box-shadow: 0 4px 8px 0 rgba(0.5, 0.5, 0.5, 0.5), 0 6px 20px 0 rgba(0.5, 0.5, 0.5, 0.5);
+            transition-duration: 1s;
+            border: 2px solid #0c1027;
+        }
+        #riya:hover{
+            transform: scaleX(1.1) scaleY(1.1);
+
+        }
+        #utkarsh1{
+            width: 46%;
+            height: 46%;
+            background-color: ;
+            margin-top: 30px;
+            margin-left: 35px;
+            margin-bottom: 30px;
+            display: flex;
+            box-shadow: 0 4px 8px 0 rgba(0.5, 0.5, 0.5, 0.5), 0 6px 20px 0 rgba(0.5, 0.5, 0.5, 0.5);
+            transition-duration: 1s;
+            border: 2px solid #0c1027;
+            
+
+        }
+        #utkarsh1:hover{
+            transform: scaleX(1.1) scaleY(1.1);
+
+        }
+        #roopen1{
+            width: 46%;
+            height: 46%;
+            background-color: ;
+            margin-top: 30px;
+            margin-left: 35px;
+            display: flex;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px 0 rgba(0.5, 0.5, 0.5, 0.5), 0 6px 20px 0 rgba(0.5, 0.5, 0.5, 0.5);
+            transition-duration: 1s;
+            border: 2px solid #0c1027;
+        }
+        #roopen1:hover{
+            transform: scaleX(1.1) scaleY(1.1);
+
+        }
+        .em_{
+            text-decoration: none;
+            transition-duration: 1s;
+            color: #0c1027;
+        }
+        .em_:hover{
+            color: #9c4668;
+
+
+        }
+        @media screen and (max-width: 1050px){
+            .main_div{
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+            }
+            #varun1{
+                display: block;
+                text-align: center;
+                width: 60%;
+                
+            }
+            #riya{
+                display: block;
+                text-align: center;
+                width: 60%;
+                
+
+            }
+            #utkarsh1{
+                display: block;
+                text-align: center;
+                width: 60%;
+                
+            }
+            #roopen1{
+                display: block;
+                text-align: center;
+                width: 60%;
+            }
+            
+
+        }
+        #working_with_us{
+            background-color:  white; 
+
+        }
+        #heading{
+            font-family: calibri;
+            font-size: 40px;
+            text-align: center;
+            color: #9c4668;
+            padding-top: 60px;
+
+        }
+        .with_us{
+            width: 23%;
+            margin-left: 20px;
+            color: #0c1027;
+            text-align: center;
+            padding-bottom: 30px;
+            box-shadow: 0 4px 8px 0 rgba(0.2, 0.2, 0.2, 0.2), 0 6px 20px 0 rgba(0.2, 0.2, 0.2, 0.2);
+        }
+        .with_us_im{
+            margin-left: 5px; 
+            margin-top: 15px;
+            transition-duration: 1s;
+        }
+
+        .with_us_im:hover{
+            transform: scaleY(1.3);
+        }
+        
+        #divvi{
+            display: flex;
+            font-family: calibri;
+        }
+        /*@media screen and(max-width: 800px){
+            #divvi{
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }*/
+        #shy{
+            background-color: white;
+            color: #0c1027;
+            text-align: center; 
+            height: 300px;
+        }
+        #shy_h{
+            color: #9c4668;
+            font-size: 35px;
+            font-family: calibri; 
+            padding-top: 45px;
+        }
+        #shy_p{
+            font-family: calibri;
+            margin-top: -32px;
+
+        }
+        #contact_us{
+            background-color: #9c4668;
+            color: white;
+            height: 40px;
+            width: 120px;
+            border: none;
+            transition-duration: 2s;
+
+        }
+        #contact_us:hover{
+            background-color:grey;
+            transform: scaleX(1.1);
+            transform: scaleY(1.1);
+            cursor: pointer;
+
+        }
+        .name_h{
+            padding-top: 10px;
+            font-weight: 150px;
+        }
+        #footer{
+            width:100%;
+            background-color: #f1f1f1;
+            height:60%;
+            display:flex;
+            font-family: calibri;
+            margin-top: -20px;
+        }
+        #first_footer{
+            width:40%;
+            margin-left: 80px;
+            margin-top: 25px;
+            margin:;
+            height:100%;
+        }
+        #second_footer{
+            margin-top: 25px;
+            margin-left: 30px;
+            width:30%;
+            height:100%;
+        }
+        .footer_button{
+            height:35px;
+            font-size: 15px;
+            font-weight:550;
+            color:#0c1027;
+            width:30%;
+            border-color: #0c1027;
+            background-color: white;
+            border-radius: 10px;
+            transition-duration: 1s;
+        }
+        .footer_button:hover{
+            background-color: #9c4668;
+            cursor: pointer;
+        }
+        .small_text_footer{
+            color:#9c4668;
+            font-family: calibri;
+        }
+        #contact_icons{
+            margin-top: 40px;
+            font-size: 20px;
+        }
+        #contact_icon{
+            margin-right: 15px;
+            color:#0c1027;
+            transition-duration: 1s;
+        }
+        #contact_icon:hover{
+            color:#9c4668;
+        }
+        .link_footer{
+            text-decoration: none;
+        }
+        .text_warning{
+            color:#9c4668;
+            margin-top:0px;
+            display: none;
+        }
+        #description{
+            resize:vertical;
+        }
+        @media screen and (max-width: 950px){
+            #form{
+                display:block;
+            }
+            #form_section{
+                width:100%;
+            }
+            #form_side_bar{
+                width:90%;
+            }
+            #footer_image{
+                display: none;
+            }
+            #footer_vakarien{
+                display: flex;
+            }
+            .form_input{
+                width:90%;
+            }
+            #first_footer{
+                width:100%;
+                margin-left: 15px;
+            }
+            #second_footer{
+                width:100%;
+                margin-left: 15px;
+                margin-top: 0px;
+            }
+            .small_text_footer{
+                margin-right: 10px;
+                margin-top: -19px;
+            }
+            #footer{
+                display: block;
+            }
+            .footer_button{
+                margin-top: -10px;
+            }
+            #meet_f{
+                padding-left: 30px;
+            }
+            #found_{
+                padding-left: 30px; 
+            }
+
+        }
+        @media only screen and (max-width: 550px){
+            #form_section{
+                margin-left:4px;
+            }
+            .footer_button{
+                height:39px;
+            }
+            #form_side_bar{
+                margin-left: 4px;
+            }
+        }
+        @media only screen and (max-width: 500px){
+            .ims{
+                width:60%;
+                height:auto;
+                margin: auto;
+                margin-top: 5px;
+            }
+        }
+        @media only screen and (max-width: 800px){
+            #divvi{
+                display:block;
+                width:100%;
+                text-align: center;
+            }
+            .with_us{
+                width:90%;
+                height:auto;
+                margin-bottom: 5%;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div id="home_header_space">
+            <a href="#" id="home_name_website" ><img style="height:70px;width:200px;margin-top: 20px"src="./images/vakarien.jpg"></a>
+        
+            <ul id="home_name_all">
+                <a href="VAKARIEN.html" class="link"><li class="set" id="HOME">HOME</li></a>
+                <a href="Open_jobs_Vakarien.html" class="link"><li class="set" id="OPEN_JOBS">OPEN JOBS</li></a>
+                <a href="./for_employers/index.html" class="link"><li class="set" id="EMPLOYERS">EMPLOYERS</li></a>
+                <a href="About_Us.html" class="link"><li class="set" id="ABOUT_US">ABOUT US</li></a>
+                <a href="./login_page/index.html" class="link"><li class="set" id="set_sign_in">SIGN IN</li></a>
+                <button style="background-color: transparent;border:none;font-size: 25px;" id="navigation_button"><i id="navigation_bar" class="fas fa-bars"></i></button>
+            </ul>
+            
+           
+    </div>
+
+    <div id="show_navigation_buttons">
+                <ul style="list-style-type: none;">
+                    <a href="VAKARIEN.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px;margin-top: 80px" class="navigation_bar_list">HOME</li></a>
+                    <a href="Open_jobs_Vakarien.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px" class="navigation_bar_list">OPEN JOBS</li></a>
+                    <a href="./for_employers/index.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px" class="navigation_bar_list">EMPLOYERS</li></a>
+                    <a href="About_Us.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px" class="navigation_bar_list">ABOUT US</li></a>
+                    <a href="./login_page/index.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px"class="navigation_bar_list">SIGN IN</li></a>
+                </ul>
+    </div>
+
+    <div  id="head_sec">
+        <p data-aos="fade-right" id="meet_f">Meet Our Founders & Team</p>
+        <p data-aos="fade-right" id="found_"> Founded by friends Smriti Narang , Riya Dhawan and  Shikhar Mann.</p>
+
+    </div>
+    <div data-aos="zoom-in-down" class="main_div">
+        <div id="varun1" >
+            <img class="ims" src="./images/shikhar.jpg.jpg">
+            <div>
+                <h3 class="name_h" >Shikhar Mann </h3>
+                    <p>As an early co-founder, Shikhar has served in roles like chairman of the board and executive president of VAKARIEN. Shikhar has had meaningful impact on his business, he holds position on the Board of Directors for the U.S. Direct Selling Association.<br> </p>
+                    <a class="em_" href="mailto:shikhar2091.be20@chitkara.edu.in? subject= subject text" ><i class="fas fa-envelope"></i> &nbsp shikhar2091.be20@chitkara.edu.in</a>
+
+            </div>
+        </div>
+
+        <div data-aos="zoom-in-down" id="riya"  >
+            <img class="ims" src="./images/riya2.jpg">
+            <div>
+                <h3 class="name_h" >Riya Dhawan </h3>
+                    <p >In 2021, Riya helped found the company, assisting in the development of the VAKARIEN. She is a member of the company's Board of Directors.Woman's magazine named her as one of the top 10 female business owners in India in 2021.<br> </p>
+                    <a class="em_" href="mailto:smriti1326@chitkara.edu.in? subject= subject text" ><i class="fas fa-envelope"></i> &nbsp riya1389.be20@chitkara.edu.in</a>
+            </div>
+        </div>
+    </div>
+
+    <div data-aos="zoom-in-up" class="main_div">
+        
+
+        <div data-aos="zoom-in-up" id="roopen1" >
+            <img  class="ims" src="./images/smriti.jpg">
+            <div>
+                <h3 class="name_h" >Smriti Narang </h3>
+                <p >In 2021, Smriti helped found the company, assisting in the development of the VAKARIEN. She is a member of the company's Board of Directors.Woman's magazine named her as one of the top 10 female business owners in India in 2021.<br> </p>
+                <a class="em_" href="mailto:smriti1326@chitkara.edu.in? subject= subject text" id="emails"><i class="fas fa-envelope"></i> &nbsp smriti1326@chitkara.edu.in</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div id="working_with_us" >
+        <p data-aos="fade-right" id="heading" >What Does Working With Us Mean?</p>
+        <div id="divvi">
+            <div data-aos="fade-up" class="with_us" >
+                <img class="with_us_im" src="http://www.elegantthemesimages.com/images/premade_blurb_5.png">
+                <p style="font-size: 20px">Quick Turn Around</p>
+                <p style="color: #9c4668">When it comes to storytelling, we take our time to understand the complexity of each story. Once that’s done, we work crazy-quick, often going from filming to final product within a few days. This is our passion – so we edit, color, and score for days straight because we love it, not because its our job.</p>
+            </div>
+
+            <div data-aos="fade-down" class="with_us">
+                <img  class="with_us_im" src="http://www.elegantthemesimages.com/images/premade_blurb_6.png">
+                <p style="font-size: 20px">Innovative Ideas</p>
+                <p style="color: #9c4668">We are never limited to one approach – instead, we love thinking outside the box. We come from a variety of different disciplines and perspectives, and brainstorming innovative ways to convey stories often results in an end product we never expected.</p>
+            </div>
+
+            <div data-aos="fade-up" class="with_us">
+                <img class="with_us_im"  src="http://www.elegantthemesimages.com/images/premade_blurb_7.png">
+                <p style="font-size: 20px;">More than Technology</p>
+                <p style="color: #9c4668">Anyone can purchase a high-end camera, but not everyone understands it. We have dedicated years to understanding the latest technology, from cameras to post-production software, in order to push our equipment to the limits. The result is incredible production value at a fraction of the size and cost.</p>
+            </div>
+
+            <div data-aos="fade-down" class="with_us">
+                <img class="with_us_im" src="http://www.elegantthemesimages.com/images/premade_blurb_8.png">
+                <p style="font-size: 20px;">Clear Communication</p>
+                <p style="color: #9c4668">We don’t beat around the bush, and what we tell you is what we mean. We are a small company with personal service. We work around the clock and in constant communication to ensure our approach is clear, effective, and meaningful.</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="shy" >
+        <p data-aos="fade-right" id="shy_h">Don't Be Shy. Get In Touch.</p>
+        <p data-aos="fade-right" id="shy_p">If you are interested in working together, send us an inquiry and we will get back to you as soon as we can!</p>
+        <a href="Contact_support.html"><button data-aos="fade-up" type="submit" id="contact_us">Contact Us </button></a>
+    </div>
+    <!--footer-->
+    <div id="footer" data-aos="fade-right">
+        <div id="first_footer">
+            <h1 style="font-size: 35px;">We're here to help</h1>
+            <h4 style="color:#9c4668">Visit our Help Center for answers to common questions or contact us directly.</h4>
+            <a href="./feedback/index.html" ><button class="footer_button">Feedback</button></a>
+            <a href="Contact_support.html" ><button class="footer_button" style="margin-left: 20px">Contact Support</button></a>
+            <br>
+            <div style="display:inline-block">
+                <h1>Solution</h1>
+                <a href="Review_story.html" class="link_footer"><h4 class="small_text_footer">Reviews</h4></a>
+                <a href="resume_builder.html" class="link_footer"><h4 class="small_text_footer">Resume</h4></a>
+            </div>
+            <div style="display: inline-block;margin-left: 20px">
+                <h1>Resources</h1>
+                <a href="How_it_works.html" class="link_footer"><h4 class="small_text_footer">How it works</h4></a>
+                <a href="FAQ.html" class="link_footer"><h4 class="small_text_footer">FAQ</h4></a>
+            </div> 
+        </div>
+        <div id="second_footer">
+            
+            <h1>Vakarien</h1>
+            <div id="footer_vakarien">
+                <a href="Open_jobs_Vakarien.html" class="link_footer"><h4 class="small_text_footer">Why Vakarien</h4></a>
+                <a href="meet_founders.html" class="link_footer"><h4 class="small_text_footer">Meet The Founders</h4></a>
+                <a href="Failed.html" class="link_footer"><h4 class="small_text_footer">Cookies& privacy</h4></a>
+                </div>
+                <a href="Donate_us.html" ><button class="footer_button">Donate Us</button></a>
+            
+            <div id="contact_icons">
+                <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjlgeDorbzwAhVPDCsKHVF8BJIYABAAGgJzZg&ae=2&ohost=www.google.com&cid=CAESQOD2jimxu7s00ezwY1HM_qBD0C7yH-6Ezk32Mn55FpiS8HLHplRfnSTcs-DkW3zfUdKXhPzSWT5JIjTh7TRHTPY&sig=AOD64_2V5kLYi7mDRCGZIpV5Ww7Q2ntx7Q&q&adurl&ved=2ahUKEwidmtjorbzwAhW0heYKHZaRCQEQ0Qx6BAgGEAE" class="link_footer"><i  id="contact_icon" class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" class="link_footer"><i  id="contact_icon" class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="link_footer"><i  id="contact_icon" class="fab fa-linkedin"></i></a>
+                <a href="https://www.apple.com/in/" class="link_footer"><i  id="contact_icon" class="fab fa-apple"></i></a>
+                <a href="https://twitter.com/?lang=en" class="link_footer"><i  id="contact_icon" class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div style="margin-left: -180px">
+            <img src="./images/footer_human.png" id="footer_image" >
+            
+        </div>
+
+    </div>
+
+</body>
+<script>
+        AOS.init();
+</script>
+
+<script>
+        $(document).ready(function(){
+            $(document).bind("contextmenu",function(e){
+  return false;
+    });
+        })
+</script>
+</html>

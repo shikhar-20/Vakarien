@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <title>Employers</title>
+  <link rel="stylesheet" href="fontawesome-free-5.7.2-web 2/css/all.css" />
+  <script>
+    const navBtn = document.getElementById("nav-btn");
+const navbar = document.getElementById("navbar");
+const navClose = document.getElementById("nav-close");
+
+navBtn.addEventListener("click", () => {
+  navbar.classList.add("showNav");
+});
+navClose.addEventListener("click", () => {
+  navbar.classList.remove("showNav");
+});
+
+  </script>
+
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+        
+    #home_name_website{
+        text-decoration: none;
+        padding-top:20px;
+        /color: transparent;/
+        color: #0c1027;
+        font-size:25px;
+        font-family: calibri;
+        animation-name:website_name;
+        animation-iteration-count:1;
+        animation-duration:15s;
+        padding-left: 110px;
+        position: fixed;
+        -webkit-text-stroke:0.5px #0c1027;
+        /* padding-right:210px; */
+    }
+    .link{
+      color: #f1f1f1;
+    }
+    #home_header_space{
+        height:120px;
+        width:100%;
+        background-color: rgb(195, 197, 212);
+        margin-top:-30px;
+        display:flex;
+        position: fixed;
+       
+        z-index: 10;
+    }
+    #home_name_all{
+        display:flex;
+        margin-left: 45%;
+        padding-top: 58px;
+        font-size:21px;
+        font-weight: 600;
+        color:#fefeff !important;
+        font-family: calibri;
+        justify-content: space-around;
+        list-style-type: none;
+        width:50%;
+        position: absolute;
+    }
+    @keyframes website_name{
+        0%{
+            color:#0c1027;
+             
+            clip-path: polygon(0% 100%, 0% 90%, 14% 87%, 26% 92%, 42% 87%, 52% 90%, 69% 93%, 79% 87%, 92% 92%, 100% 100%);
+        }
+        20%{
+            color:#0c1027;
+             
+            clip-path: polygon(0% 100%, 0 79%, 8% 74%, 20% 82%, 33% 81%, 51% 86%, 67% 87%, 78% 81%, 100% 78%, 100% 100%);
+        }
+        40%{
+            color:#0c1027;
+            
+            clip-path: polygon(0% 100%, 0 55%, 16% 65%, 25% 73%, 40% 75%, 54% 69%, 68% 72%, 81% 65%, 100% 49%, 100% 100%);
+        }
+        60%{
+            color:#0c1027;
+            
+            clip-path: polygon(0% 100%, 0 50%, 13% 54%, 18% 49%, 29% 51%, 41% 49%, 56% 41%, 72% 34%, 100% 25%, 100% 100%);
+        }
+        80%{
+            color:#0c1027;
+            
+            clip-path: polygon(0% 100%, 0 21%, 16% 29%, 27% 31%, 43% 30%, 67% 14%, 84% 9%, 93% 7%, 100% 8%, 100% 100%);
+        }
+        100%{
+            color:#0c1027;   
+            clip-path: polygon(0% 100%, 0 0, 18% 0, 29% 0, 49% 0, 67% 0, 88% 0, 96% 0, 100% 0, 100% 100%);
+            -webkit-text-stroke:0px #0c1027;
+        }   
+    }
+    #navigation_bar{
+        display:none;
+        /outline:none;/
+
+    }
+    #set_sign_in{
+        width:100px;
+        color:white;
+        background-color: #0c1027;
+        height: 100px;
+        margin-top: -38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @media screen and (max-width: 1050px) {
+        .set{
+            display: none;
+        }
+        #navigation_bar{
+            display: flex;
+            color:#0c1027;
+            justify-content: flex-end;
+        }
+        #set_sign_in{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 800px){
+        
+        #home_name_all{
+            position:sticky;
+            margin-left: 390px;
+        }
+         #navigation_bar{
+        }
+
+    }
+    .link{
+        text-decoration: none;
+        color:#ffffff;
+        font-family: calibri;
+    }
+    .link:hover{
+        text-decoration: underline;
+    }
+  ::-webkit-scrollbar {
+      width: 11px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+      border-radius: 10px;
+    }
+     
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700;800&display=swap");
+:root {
+  --clr-primary-500: hsl(333, 80%, 67%);
+  --clr-primary-800: hsl(300, 43%, 22%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(300, 24%, 96%);
+  --clr-neutral-400: hsl(303, 10%, 53%);
+  --ff-primary: "spartan", sans-serif;
+  --fs-400: 0.8125rem;
+  --fs-500: 0.9375rem;
+  --fs-900: 3rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.attribution {
+  padding-bottom: 1rem;
+}
+
+.top {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+main {
+  width: 100%;
+  max-width: 72em;
+  margin: 0 auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 4rem 1rem;
+}
+
+.main {
+  max-width: 25rem;
+  text-align: center;
+}
+.main__title {
+  font-size: var(--fs-900);
+  color: #0c1027;
+
+  margin-bottom: 1rem;
+}
+.main__summary {
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-500);
+  line-height: 1.4;
+}
+
+@media (min-width: 876px) {
+  .main {
+    text-align: left;
+  }
+  .main__title {
+    margin: 0 0 0.5rem;
+  }
+}
+.rating-details {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 27rem;
+  color: #0c1027;
+  font-weight: bold;
+  margin: 3rem auto 0;
+  font-size: var(--fs-500);
+}
+
+.rating {
+  background: var(--clr-neutral-200);
+  padding: 1.1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.rating + .rating {
+  margin-top: 1rem;
+}
+.rating:nth-child(2) {
+  transform: translateX(3rem);
+}
+.rating:last-child {
+  transform: translateX(6rem);
+}
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.star + .star {
+  margin-left: .5rem;
+}
+
+@media (max-width: 1000px) {
+  .rating:nth-child(2) {
+    transform: translateX(0);
+  }
+  .rating:last-child {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 876px) {
+  .rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .stars {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+.reviews {
+  font-size: var(--fs-500);
+  grid-column: span 2;
+  color: var(--clr-neutral-100);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+}
+
+.review {
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  grid-template-columns: 3rem 1fr;
+  grid-gap: 1rem 1.5rem;
+  line-height: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: rgb(31, 26, 77);
+}
+@media (min-width: 1000px) {
+  .review:nth-child(2) {
+    transform: translateY(1rem);
+  }
+  .review:last-child {
+    transform: translateY(2rem);
+  }
+}
+
+.profile-pic {
+  border-radius: 100px;
+}
+
+.status {
+  color: var(--clr-primary-500);
+}
+
+.quote {
+  grid-column: span 2;
+}
+
+#footer{
+            width:100%;
+            background-color: #f1f1f1;
+            height:60%;
+            display:flex;
+            font-family: calibri;
+            margin-top: -20px;
+        }
+        #first_footer{
+            width:40%;
+            margin-left: 80px;
+            margin-top: 25px;
+            margin:;
+            height:100%;
+        }
+        #second_footer{
+            margin-top: 25px;
+            margin-left: 30px;
+            width:30%;
+            height:100%;
+        }
+        .footer_button{
+            height:35px;
+            font-size: 15px;
+            font-weight:550;
+            color:#0c1027;
+            width:30%;
+            border-color: #0c1027;
+            background-color: white;
+            border-radius: 10px;
+            transition-duration: 1s;
+        }
+        .footer_button:hover{
+            background-color: #9c4668;
+            cursor: pointer;
+        }
+        .small_text_footer{
+            color:#9c4668;
+            font-family: calibri;
+        }
+        #contact_icons{
+            margin-top: 40px;
+            font-size: 20px;
+        }
+        #contact_icon{
+            margin-right: 15px;
+            color:#0c1027;
+            transition-duration: 1s;
+        }
+        #contact_icon:hover{
+            color:#9c4668;
+        }
+        .link_footer{
+            text-decoration: none;
+        }
+        @media screen and (max-width: 950px){
+            #footer_image{
+                display: none;
+            }
+            #footer_vakarien{
+                display: flex;
+            }
+            #first_footer{
+                width:100%;
+                margin-left: 15px;
+            }
+            #second_footer{
+                width:100%;
+                margin-left: 15px;
+                margin-top: 0px;
+            }
+            .small_text_footer{
+                margin-right: 10px;
+                margin-top: -19px;
+            }
+            #footer{
+                display: block;
+            }
+            .footer_button{
+                margin-top: -10px;
+            }
+
+        } 
+  
+</style>
+</head>
+
+<body>
+  <span class="nav-btn" id="nav-btn">
+    <i class="fas fa-bars"></i>
+  </span>
+  <div id="home_header_space">
+    <a href="#" id="home_name_website" ><img style="height:70px;width:200px;margin-top: 20px"src="./images/logo.jpeg"></a>
+    <ul id="home_name_all">
+        <a href="VAKARIEN.html" class="link"><li class="set" id="HOME">HOME</li></a>
+        <a href="Open_jobs_Vakarien.html" class="link"><li class="set" id="OPEN_JOBS">OPEN JOBS</li></a>
+        <a href="#" class="link"><li class="set" id="EMPLOYERS" style="color: rgb(155, 61, 61);">EMPLOYERS</li></a>
+        <a href="#" class="link"><li class="set" id="ABOUT_US">ABOUT US</li></a>
+        <a href="Sign_in.html" class="link"><li class="set" id="set_sign_in">SIGN IN</li></a>
+        <button style="background-color: transparent;border:none;font-size: 25px;" id="navigation_button"><i id="navigation_bar" class="fas fa-bars"></i></button>
+    </ul>
+</div>
+  
+
+  <header class="header" style="background-image: url('./images/img-4.jpg');"> </header>
+  <header>
+    <div class="banner">
+      <h3 class="banner-subtitle" >WELCOME </h3>
+      <h1 class="banner-title" >We are Reason Of Thousands Happiness</h1>
+
+    </div>
+  </header>
+  
+  <div class="content-divider"></div>
+
+  <section class="skills clearfix">
+   
+    <a href="">
+    <article class="skill">
+      <span class="skill-icon">
+        <i class="fas fa-money-check-alt"></i>
+      </span>
+      <h3 class="skill-title">Salary Index</h3>
+      <p class="skill-text">
+        Know whether you earn more or less than your peers, without violating privacy with Vakarien Career Benchmarking.
+      </p>
+    </article></a>
+ 
+    <a href="">
+    <article class="skill">
+      <span class="skill-icon">
+        <i class="fas fa-chart-line"></i>
+      </span>
+      <h3 class="skill-title">Career Booster</h3>
+      <p class="skill-text">
+        The Best pack to better your chances of finding a job faster. Get the Professionally Built Resume that is just right for your Goals. 
+      </p>
+    </article></a>
+ 
+    <a href="">
+    <article class="skill">
+      <span class="skill-icon">
+        <i class="fas fa-file-alt"></i>
+      </span>
+      <h3 class="skill-title">Xpress Resume+ </h3>
+      <p class="skill-text">
+       Speed Up your job hunt with Xpress Resume+ Find Better. Faster! .Also, with monthly insights into hiring trends.
+      </p>
+    </article></a>
+   
+    <a href="">
+    <article class="skill">
+      <span class="skill-icon">
+        <i class="fas fa-clock"></i>
+      </span>
+      <h3 class="skill-title">Popularity</h3>
+      <p class="skill-text">
+        We started out in early 20's as a University Research Project. Today this is the synonymous with the off-campus jobs.
+      </p>
+    </article></a>
+  </section>
+  <section class="about">
+    <div class="section-center clearfix">
+      <article class="about-img">
+        <div class="about-picture-container">
+          <img src="./images/slider1-1.jpg" alt="" class="about-picture" />
+        </div>
+      </article>
+      <article class="about-info">
+        <div>
+          <h3 class="section-subtitle"></h3>
+          <h2 class="section-title">Our Services</h2>
+        </div>
+        <p class="about-text">
+          Expand the reach of your employer brand with Monster’s Branding Solutions. Showcase your products & offerings to the audience of your choice.
+        </p>
+        <p class="about-text">
+          Find your next hire with all new RDA powered by Semantic Search technology that makes it easy and quick to find the talent matching your requirements.
+        </p>
+        <p class="about-text">
+          Reach your next hire faster. Get relevant responses to your job ads with our new age technology.
+        </p>
+
+      </article>
+    </div>
+  </section>
+  <section class="products">
+    <div class="section-center clearfix">
+      <article class="products-info">
+        <div>
+          <h3 class="product-text">Our Partners</h3>
+          <h2 >These are Top initiative Partners </h2>
+        </div>
+      
+        <p class="product-text">
+          They recruit the best resume for their companies from our website to build a new definition of success. Top Companies recruitments in 2020-2021.
+        </p>
+
+      </article>
+      <article class="products-inventory clearfix">
+        <article class="product">
+          <a href="#"></a>
+          <img src="./images/amazon.jfif" alt="" class="product-img" />
+          <h3 class="product-title">Amazon</h3>
+          <h3 class="product-text">#1 Software development engineer</h3></a>
+        </article>
+       
+        <article class="product">
+          <a href="#">
+          <img src="./images/flipkart.jpg" alt="" class="product-img" />
+          <h3 class="product-title">Flipkart</h3>
+          <h3 class="product-text">#2 Marketing Managers</h3></a>
+        </article>
+       
+        <article class="product"><a href="#">
+          <img src="./images/goldman-sachs.jpg" alt="" class="product-img" />
+          <h3 class="product-title">Goldman-Sachs</h3>
+          <h3 class="product-text">#3 Finance Experts</h3></a>
+        </article>
+        
+      </article>
+    </div>
+  </section>
+
+
+  <main>
+    <div class="top">
+      <section class="main">
+        <h1 class="main__title">Our Users and Recruiters</h1>
+  
+        <p class="main__summary">
+         Top Recruitersand Top Employers Reviews
+        </p>
+      </section>
+  
+      <section class="rating-details">
+        <ul class="ratings">
+          <li class="rating">
+            <div class="stars">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+            </div>
+            Rated 5 Stars in Reviews</li>
+          <li class="rating">
+            <div class="stars">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+            </div>
+            Rated 5 Stars in Reviews</li>
+          <li class="rating">
+            <div class="stars">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+              <img src="./images/icon-star.svg" alt="" class="star">
+            </div>
+            Rated 5 Stars in Reviews</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="reviews">
+      <div class="review">
+        <img src="./images/person3.jpg!d" alt="" class="profile-pic">
+        <div class="reviewer">
+          Varun Kansal
+          <p class="status">Google Software Team Manager</p>
+        </div>
+        <p class="quote">
+          "We needed the same printed design as the one we had ordered a week prior.
+          Not only did they find the original order, but we also received it in time.
+          Excellent!"
+        </p>
+      </div>
+      <div class="review">
+        <img src="./images/person2.jfif" alt="" class="profile-pic">
+        <div class="reviewer">
+          
+      Utkarsh Jindal
+          <p class="status">Microsoft SDE-3</p>
+        </div>
+        <p class="quote">
+           "Customer service is always excellent and very quick turn around. Completely
+          delighted with the simplicity of the purchase and the speed of delivery."
+          
+        </p>
+      </div>
+
+      <div class="review">
+        <img src="./images/person1.jfif" alt="" class="profile-pic">
+        <div class="reviewer">
+          Roopen Singh
+          <p class="status">Apple Head Recruiter</p>
+        </div>
+        <p class="quote">
+          "Put an order with this company and can only praise them for the very high
+          standard. Will definitely use them again and recommend them to everyone!"
+         
+        </p>
+      </div>
+    </section>
+    
+  </main>
+  <!--footer-->
+    <div id="footer">
+        <div id="first_footer">
+            <h1 style="font-size: 35px;">We're here to help</h1>
+            <h4 style="color:#9c4668">Visit our Help Center for answers to common questions or contact us directly.</h4>
+            <a href="#" ><button class="footer_button">Feedback`</button></a>
+            <a href="Contact_support.html" ><button class="footer_button" style="margin-left: 20px">Contact Support</button></a>
+            <br>
+            <div style="display:inline-block">
+                <h1>Solution</h1>
+                <a href="Review_story.html" class="link_footer"><h4 class="small_text_footer">Reviews</h4></a>
+                <a href="#" class="link_footer"><h4 class="small_text_footer">Resume</h4></a>
+            </div>
+            <div style="display: inline-block;margin-left: 20px">
+                <h1>Resources</h1>
+                <a href="How_it_works.html" class="link_footer"><h4 class="small_text_footer">How it works</h4></a>
+                <a href="#" class="link_footer"><h4 class="small_text_footer">FAQ</h4></a>
+            </div> 
+        </div>
+        <div id="second_footer">
+            
+            <h1>Vakarien</h1>
+            <div id="footer_vakarien">
+                <a href="Open_jobs_Vakarien.html#job_heading" class="link_footer"><h4 class="small_text_footer">Why Vakarien</h4></a>
+                <a href="#" class="link_footer"><h4 class="small_text_footer">Meet The Founders</h4></a>
+                <a href="#" class="link_footer"><h4 class="small_text_footer">Cookies& privacy</h4></a>
+                </div>
+                <a href="Donate_us.html" ><button class="footer_button">Donate Us</button></a>
+            
+            <div id="contact_icons">
+                <a href="#" class="link_footer"><i  id="contact_icon" class="fab fa-facebook-f"></i></a>
+                <a href="#" class="link_footer"><i  id="contact_icon" class="fab fa-instagram"></i></a>
+                <a href="#" class="link_footer"><i  id="contact_icon" class="fab fa-linkedin"></i></a>
+                <a href="#" class="link_footer"><i  id="contact_icon" class="fab fa-apple"></i></a>
+                <a href="#" class="link_footer"><i  id="contact_icon" class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div style="margin-left: -180px">
+            <img src="./images/footer_human.png" id="footer_image" >
+            
+        </div>
+
+    </div>
+  
+</body>
+
+</html>

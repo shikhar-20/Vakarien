@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+      <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+          <title>Thanks giving</title>
+          <style>
+          /* Center the loader */
+          #preloader {
+            width: 120px;
+            height: 120px;
+            margin-left:45%;
+            margin-top: 10%;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #0c1027;
+            animation: spin 2s linear infinite;
+          }
+
+          
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+
+          #pray{
+            font-size: 50px;
+            color:#9c4668;
+          }
+          #text {
+            display: none;
+            text-align: center;
+            margin-top:15%;
+            animation-name: animate;
+            animation-duration: 1s
+          }
+          @keyframes animate { 
+            from{ opacity:0 } 
+            to{  opacity:1 }
+          }
+          #revert{
+            color:#9c4668;
+          }
+          #revert:hover{
+            color:#0c1027;
+            text-decoration: underline;
+          }
+          </style>
+          </head>
+          <body onload="show()" >
+
+              <div id="preloader"></div>
+
+              <div style="display:none;font-family: calibri" id="text">
+                <i class="fas fa-praying-hands" id="pray"></i>
+                <h2>Thanks </h2>
+                <p>Thanks so much for your valueable Money.....</p>
+                <a href="VAKARIEN.html" style="text-decoration: none" id="revert"><h5>Revert to home page</h5></a>
+              </div>
+
+          <script>
+              var myVar;
+
+              function show() {
+                myVar = setTimeout(showPage, 3000);
+              }
+
+              function showPage() {
+                document.getElementById("preloader").style.display = "none";
+                document.getElementById("text").style.display = "block";
+              }
+          </script>
+
+      </body>
+</html>

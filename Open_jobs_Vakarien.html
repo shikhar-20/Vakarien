@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Open jobs</title>
+	 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+    	$(document).ready(function(){
+    		$("#OPEN_JOBS").css("color","#9c4668");
+    		 $("#navigation_button").click(function(){
+                $("#show_navigation_buttons").toggle();
+                $("navigation_button").css("border","none");
+                //     $("#show_navigation_buttons").css("display","flex");
+                // });
+            });
+    		$(".job_view_detail").click(function(){
+    			 window.location.href="Failed.html";
+    		})
+    	})
+    </script>
+    <style>
+    	html{
+            scroll-behavior: smooth;
+        }
+        body{
+        	overflow-x:hidden;
+        }
+        *:focus{
+            outline:none;
+        }
+        #show_navigation_buttons{
+            width:100%;
+            height:100%;
+            background-color:#0c1027;
+
+            color:#9c4668;
+            font-family: calibri;
+            font-size:30px;
+            display: none;
+            line-height: 20px;
+            text-align: center;
+            margin-top: -20px;
+            position: fixed;
+            z-index:9;
+        }
+        .navigation_bar_list{
+            transition-duration: 1s;
+            color:#9c4668;
+        }
+        .navigation_bar_list:hover{
+            color:white;
+            
+        }
+    	#home_name_website{
+            text-decoration: none;
+            padding-top:20px;
+            /*color: transparent;*/
+            color: #0c1027;
+            font-size:25px;
+            font-family: calibri;
+            animation-name:website_name;
+            animation-iteration-count:1;
+            animation-duration:15s;
+            padding-left: 8%;
+            position: fixed;
+            -webkit-text-stroke:0.5px #0c1027;
+            /*padding-right:210px;*/
+
+        }
+        #home_header_space{
+            height:120px;
+            width:100%;
+            background-color: white;
+            margin-top:-30px;
+            display:flex;
+            position: fixed;
+           
+            z-index: 10;
+        }
+        #home_name_all{
+            display:flex;
+            margin-left: 45%;
+            padding-top: 38px;
+            font-size:21px;
+            font-weight: 600;
+            color:#0c1027;
+            font-family: calibri;
+            justify-content: space-around;
+            list-style-type: none;
+            width:50%;
+            position: absolute;
+        }
+        @keyframes website_name{
+            0%{
+                color:#0c1027;
+                 
+                clip-path: polygon(0% 100%, 0% 90%, 14% 87%, 26% 92%, 42% 87%, 52% 90%, 69% 93%, 79% 87%, 92% 92%, 100% 100%);
+            }
+            20%{
+                color:#0c1027;
+                 
+                clip-path: polygon(0% 100%, 0 79%, 8% 74%, 20% 82%, 33% 81%, 51% 86%, 67% 87%, 78% 81%, 100% 78%, 100% 100%);
+            }
+            40%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 55%, 16% 65%, 25% 73%, 40% 75%, 54% 69%, 68% 72%, 81% 65%, 100% 49%, 100% 100%);
+            }
+            60%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 50%, 13% 54%, 18% 49%, 29% 51%, 41% 49%, 56% 41%, 72% 34%, 100% 25%, 100% 100%);
+            }
+            80%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 21%, 16% 29%, 27% 31%, 43% 30%, 67% 14%, 84% 9%, 93% 7%, 100% 8%, 100% 100%);
+            }
+            100%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 0, 18% 0, 29% 0, 49% 0, 67% 0, 88% 0, 96% 0, 100% 0, 100% 100%);
+                -webkit-text-stroke:0px #0c1027;
+            }
+            
+        }
+        #navigation_bar{
+            display:none;
+            /*outline:none;*/
+
+        }
+        #set_sign_in{
+            width:100px;
+            color:white;
+            background-color: #0c1027;
+            height: 100px;
+            margin-top: -38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (max-width: 1050px) {
+            .set{
+                display: none;
+            }
+            #navigation_bar{
+                display: flex;
+                color:#0c1027;
+                justify-content: flex-end;
+            }
+            #set_sign_in{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 800px){
+            
+            #home_name_all{
+                position:sticky;
+                margin-left: 390px;
+            }
+             #navigation_bar{
+               /* position: fixed;*/
+            }
+
+        }
+        .link{
+            text-decoration: none;
+            color:#0c1027;
+            font-family: calibri;
+        }
+        .link:hover{
+            text-decoration: underline;
+        }
+    	::-webkit-scrollbar {
+          width: 11px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1; 
+          border-radius: 10px;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #888; 
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+    	#job_first_section{
+    		height:80vh;
+    		padding-top: 120px;
+    		width:98vw;
+    		background-image: url("./images/Job_photo.jpg");
+    		background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display:flex;
+            flex-direction: column-reverse;
+    	}
+    	#job_heading{
+    		font-family: calibri;
+    		color:white;
+    		font-size: 80px;
+    		padding-left:30px;
+    		margin-bottom: 60px;
+    		font-weight: 540;
+    		animation-name: down_top;
+    		animation-iteration-count: 1;
+    		animation-duration: 5s;
+    	}
+    	#job_second_section{
+    		margin-top: 85px;
+    		display: flex;
+
+    	}
+    	@keyframes down_top{
+    		0%{
+    			opacity: 0;
+    		    transform: translateY(40px);
+    		}
+    		100%{
+    			opacity:1;
+    			transform: translateY(0);
+    		}
+    	}
+    	#second_section_first{
+    		width:300px;
+    	}
+    	#second_section_second{
+    		width:100%;
+    		padding-left: 80px;
+    		margin-top: -30px;
+    		
+    	}
+    	#explain_heading{
+    		font-size: 90px;
+    	}
+    	#job_third_section{
+    		background-color: #f1f1f1;
+    		width:100% ;
+    		height:100%;
+    	}
+    	#job_third_heading{
+    		color:#0c1027;
+    		font-size:48px;
+    		font-family: calibri;
+    		line-height: 1.4;
+    		font-weight: 700px;
+    	}
+    	.column_third_section{
+    		width:48%;
+    		display: inline-block;
+    	}
+    	.first{
+    		margin-left:60px;
+    		font-family: calibri;
+    		color:#0c1027;
+    		font-size:25px;
+    		margin-top: 45px;
+    		transition-duration: 2s;
+    	}
+    	.second{
+    		margin-left:60px;
+    		font-family: calibri;
+    		color:grey;
+    		font-size:18px;
+    		line-height: 1.6;
+    	}
+    	.third{
+    		margin-left:60px;
+    		font-family: calibri;
+    		color:black;
+    	}
+    	.forth{
+    		margin-left:60px;
+    		font-family: calibri;
+    		color:#9c4668;
+    		font-size:17px;
+    		cursor:pointer;
+    	}
+    	.first:hover{
+    		color:#9c4668;
+    		cursor:pointer;
+    	}
+    	
+    	#job_forth_section{
+    		width:100%;
+    		height:100%;
+    		background-color: #f1f1f1;
+
+    	}
+    	#first_forth_section{
+    		height: 470px;
+    		width:30%;
+    		margin:70px;
+    		background-color:white;
+    		font-family: calibri;
+    		font-size: 20px;
+    		color:#0c1027;
+    		position:sticky;
+    		top:110px;
+
+    	}
+    	.job_box{
+    		background-color: white;
+    		width:55vw;
+    		margin-top: 70px;
+    		margin-left: -50px;
+
+    	}
+    	.job_heading{
+    		font-family: calibri;
+    		padding-top: 25px;
+    		margin-left:20px;
+    		color:#0c1027;
+    	}
+    	.job_sub_heading{
+    		font-family: calibri;
+            color:grey;
+            margin-left:20px;
+            margin-top: -10px;
+    	}
+    	.job_heading_img{
+    		height:40px;
+    		width:100px;
+    		margin-top: 10px;
+    		padding-left:60%
+    	}
+    	#job_heading_icon{
+    		 margin-left:20px;
+    		 opacity:0.7;
+    		 color:grey;
+    		 font-size:15px;
+    	}
+    	.icon_label{
+    		color:#3a3535;
+    		font-family: calibri;
+    		font-size:15px;
+    		padding-left:15px;
+    	}
+    	.job_box_button{
+    		border-radius: 10px;
+    		color:#3a3535;
+    		background-color: #f1f1f1;
+    		font-size:15px;
+    		border:none; 
+    		margin-left: 20px;
+    		margin-bottom: 30px;
+    		height:40%;
+    		width:100px;
+    	}
+    	.job_view_detail{
+    		color:#9c4668;
+    		margin-left: 60%;
+    		margin-top:-5px;
+    		font-family: calibri;
+    		cursor: pointer;
+    	}
+    	#footer{
+    		width:100%;
+    		background-color: #f1f1f1;
+    		height:60%;
+    		display:flex;
+    		font-family: calibri;
+    		margin-top: -20px;
+    		background-attachment: fixed;
+    	}
+    	#first_footer{
+    		width:40%;
+    		margin-left: 80px;
+    		margin-top: 25px;
+    		margin:;
+    		height:100%;
+    	}
+    	#second_footer{
+    		margin-top: 25px;
+    		margin-left: 30px;
+    		width:30%;
+    		height:100%;
+    	}
+    	.footer_button{
+    		height:35px;
+    		font-size: 15px;
+    		font-weight:550;
+    		color:#0c1027;
+    		width:30%;
+    		border-color: #0c1027;
+    		background-color: white;
+    		border-radius: 10px;
+    		transition-duration: 1s;
+    	}
+    	.footer_button:hover{
+    		background-color: #9c4668;
+    		cursor: pointer;
+    	}
+    	.small_text_footer{
+    		color:#9c4668;
+    		font-family: calibri;
+    	}
+    	#contact_icons{
+    		margin-top: 40px;
+    		font-size: 20px;
+    	}
+    	#contact_icon{
+    		margin-right: 15px;
+    		color:#0c1027;
+    		transition-duration: 1s;
+    	}
+    	#contact_icon:hover{
+    		color:#9c4668;
+    	}
+    	.link_footer{
+    		text-decoration: none;
+    	}
+    	@media screen and (max-width: 950px){
+    		.column_third_section{
+    			width:100%;
+    			display: block;
+    		}
+    		#job_second_section{
+    			display: block;
+    		}
+    		#second_section_first{
+    			width:100%;
+    		}
+    		#second_section_second{
+    			width:100%;
+    			padding-left: 20px;
+    			margin-top: 30px;
+    		}
+    		#line{
+    			width:75%;
+    		}
+    		#first_forth_section{
+    			display:none;
+    		}
+    		.job_box{
+    			margin:auto;
+    			width:95vw;
+
+    		}
+    		#explain_heading{
+    			font-size: 50px;
+    		}
+    		#home_header_space{
+                width:98vw;
+            }
+    		#human1{
+    			display:none;
+    		}
+    		#footer_image{
+    			display: none;
+    		}
+    		#footer_vakarien{
+    			display: flex;
+    		}
+    		#first_footer{
+    			width:100%;
+    			margin-left: 15px;
+    		}
+    		#second_footer{
+    			width:100%;
+    			margin-left: 15px;
+    			margin-top: 0px;
+    		}
+    		.small_text_footer{
+    			margin-right: 10px;
+    			margin-top: -19px;
+    		}
+    		#footer{
+    			display: block;
+    		}
+    		.footer_button{
+    			margin-top: -10px;
+    		}
+
+    	}
+    	@media screen and (max-width: 400px){
+    		.job_heading_img{
+    			padding-left:45%; 
+    		}
+    	}
+    </style>
+</head>
+<body>
+	<!--Header-->
+    <div id="home_header_space">
+            <a href="VAKARIEN.html" id="home_name_website" ><img style="height:70px;width:200px;margin-top: 20px"src="./images/vakarien.jpg"></a>
+            <ul id="home_name_all">
+                <a href="VAKARIEN.html" class="link"><li class="set" id="HOME">HOME</li></a>
+                <a href="Open_jobs_Vakarien.html" class="link"><li class="set" id="OPEN_JOBS">OPEN JOBS</li></a>
+                <a href="./for_employers/index.html" class="link"><li class="set" id="EMPLOYERS">EMPLOYERS</li></a>
+                <a href="About_Us.html" class="link"><li class="set" id="ABOUT_US">ABOUT US</li></a>
+                <a href="./login_page/index.html" class="link"><li class="set" id="set_sign_in">SIGN IN</li></a>
+                <button style="background-color: transparent;border:none;font-size: 25px;" id="navigation_button"><i id="navigation_bar" class="fas fa-bars"></i></button>
+            </ul>
+        
+           
+    </div>
+	<!--Image-->
+	<div id="job_first_section">
+		 <div id="show_navigation_buttons">
+                <ul style="list-style-type: none;">
+                    <a href="VAKARIEN.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px;margin-top: 230px" class="navigation_bar_list">HOME</li></a>
+                    <a href="Open_jobs_Vakarien.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px" class="navigation_bar_list">OPEN JOBS</li></a>
+                    <a href="./for_employers/index.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px" class="navigation_bar_list">EMPLOYERS</li></a>
+                    <a href="About_Us.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px" class="navigation_bar_list">ABOUT US</li></a>
+                    <a href="./login_page/index.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px"class="navigation_bar_list">SIGN IN</li></a>
+                </ul>
+            </div>
+		<span id="job_heading">Work With Our Partners</span>
+	</div>
+	<!--why vakarien-->
+	<div id="job_second_section">
+		
+		<div id="second_section_first">
+			<HR WIDTH="100%" COLOR="#9c4668" SIZE="3" style="margin-left:20px" id="line">
+			<span style="font-family: calibri;color:#0c1027;font-size:25px;margin: 20px;padding-top: 30px;"> Why Vakarien?</span>
+			<img src="./images/human.png" id="human1" style="height:220px;width:270px;margin-top: 20px">
+		</div>
+		<div id="second_section_second">
+			<span style="color:#0c1027;font-family: calibri;font-weight:500" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" id="explain_heading">Find the job you want, faster and smarter!</span>
+			<p data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"data-aos-offset="0"style="color:grey;font-family: calibri;font-size:18px;line-height: 1.6">Vakarien Recruiting is the best in the world at helping businesses scale for growth.
+				<br><br>
+				We are the leading recruiting agency for revenue generating, marketing and people operations roles. Since 2009 Vakarien has partnered with the biggest names across sectors offering a customized approach to each search. We've established networks of genuine relationships that allow us to source the highest-quality talent and execute quickly.</p>
+		</div>
+	</div>
+	<!--open roles-->
+	<div id="job_third_section">
+		<div  style="background-color: white;width:91%;margin: auto;text-align: center;">
+			<div style="padding-top: 60px">
+				<span id="job_third_heading" >Talk To Our Recruiters About Any Open Roles</span>
+			</div>
+		</div>
+		<div style="padding-top: 30px;background-color: white;width:91%;margin: auto;">
+			<div class="column_third_section">
+				<h1 data-aos="fade-up" class="first">Sales Development Representative (SDR)</h1>
+				<p data-aos="fade-up"class="second">Do you want to be a part of a hard-working, winning team, where people love coming to work to sell something amazing? Are you looking for an opportunity that has unlimited earning potential? Our clients are looking to grow the greatest SDR team, are you ready to grow with them?</p>
+				<h4 data-aos="fade-up"class="third">AVAILABILITIES IN:</h4>
+				<h4 data-aos="fade-up"class="forth">San Francisco, New York, Austin, Chicago, Los Angeles</h4>
+
+				<h1 data-aos="fade-up"class="first">Enterprise Account Executive</h1>
+				<p data-aos="fade-up"class="second">Seeking high-energy Enterprise Account Executives who will engage with C-suite and VP level executives at global enterprise companies to generate new business revenue. AEs are quota-carrying reps responsible for the full sales cycle. </p>
+				<h4 data-aos="fade-up"class="third">AVAILABILITIES IN:</h4>
+				<h4 data-aos="fade-up"class="forth">San Francisco, New York, Austin, Chicago, Los Angeles</h4>
+
+				<h1 data-aos="fade-up"class="first">Account Executive</h1>
+				<p data-aos="fade-up"class="second">As Account Executive at a high-growth client, you'll prospect, develop, and close strategic deals with key stakeholders at Fortune 500 companies. Working closely with their marketing and leadership teams, you'll develop customer relationships, tune the way they communicate with global businesses, and raise the bar for an excellent sales experience.</p>
+				<h4 data-aos="fade-up"class="third">AVAILABILITIES IN:</h4>
+				<h4 data-aos="fade-up"class="forth">San Francisco, New York, Austin, Chicago, Los Angeles</h4>
+
+				<h1 data-aos="fade-up" class="first">Sales Operations Manager</h1>
+				<p data-aos="fade-up" class="second">We are looking for a seasoned Sales Operations Manager to join our clients high-performing global sales team and help scale their sales processes and operations. You will play a key role in directing the sales organization toward strategic goals and operational effectiveness set forth by the business.</p>
+				<h4 data-aos="fade-up" class="third">AVAILABILITIES IN:</h4>
+				<h4 data-aos="fade-up" class="forth">San Francisco, New York, Austin, Chicago, Los Angeles</h4>
+			</div>
+			<div class="column_third_section">
+				<h1 data-aos="fade-up" class="first" style="padding-top:-20px;">Business Development Representative</h1>
+				<p  data-aos="fade-up"class="second">Are you eager to begin your career in sales with an organization that is quickly growing? Does working on a team that's highly visible across our sales organization excite you? Are you mission-driven, detail-oriented, energetic, and proactive?</p>
+				<h4 data-aos="fade-up" class="third">AVAILABILITIES IN:</h4>
+				<h4 data-aos="fade-up" class="forth">San Francisco, New York, Austin, Chicago, Los Angeles</h4>
+
+				<h1 data-aos="fade-up" class="first">Account Manager</h1>
+				<p data-aos="fade-up" class="second">Account Managers are responsible for ensuring the highest level of client service and providing unmatched product and industry knowledge to C-Level executives. </p>
+				<h4 data-aos="fade-up" class="third">AVAILABILITIES IN:</h4>
+				<h4 data-aos="fade-up" class="forth">San Francisco, New York, Austin, Chicago, Los Angeles</h4>
+
+				<h1 data-aos="fade-up" class="first">Customer Success Manager</h1>
+				<p  data-aos="fade-up" class="second">Our client is looking for an exceptional Customer Success Manager eager to build his or her career at an exciting and innovative market leader. This role will be a key hire for the post-sales team. The ideal candidate has the ability to learn and adapt quickly in a fast-paced, deadline and detail-oriented environment. </p>
+				<h4 data-aos="fade-up" class="third">AVAILABILITIES IN:</h4>
+				<h4 data-aos="fade-up" class="forth">San Francisco, New York, Austin, Chicago, Los Angeles</h4>
+
+				<h1 data-aos="fade-up" class="first">Director of Demand Generation</h1>
+				<p data-aos="fade-up" class="second">Our clients are looking for a self-driven, creative, and analytical Director of Demand Generation who will be in charge of developing and executing effective multi-channel campaigns that drive new leads and nurture active accounts. You will play a critical role in the next phase of growth by delivering sales-ready leads to achieve customer acquisition and revenue goals.</p>
+				<h4 data-aos="fade-up" class="third">AVAILABILITIES IN:</h4>
+				<h4 data-aos="fade-up" class="forth">San Francisco, New York, Austin, Chicago, Los Angeles</h4>
+			</div>
+		</div>
+		<!--filter jobs-->
+		<div style="display:flex;position: sticky;top:0;" id="showing_jobs">
+			<div id="first_forth_section">
+				<div style="text-align: center;">
+					<i class="fas fa-filter" style="margin-top: 15px"></i>
+					<span style="font-family: calibri;font-size: 20px;margin-top:25px">Filters</span>
+				</div>
+				<div style="padding-top: 35px;padding-left: 20px">
+					<Span style="font-size:25px;font-weight: 550">Category</Span>
+					<br><br>
+					<input type="text" placeholder="  e.g.Marketing" style="width:90%;height:30px;margin-bottom: 10px;">
+					<Span style="font-size:25px;font-weight: 550;">Location</Span>
+					<br><br>
+					<input type="text" placeholder="  e.g.Delhi" style="width:90%;height:30px;margin-bottom: 10px;">
+					<span >Remote Jobs</span>
+					<input type="checkbox">
+					<br>
+					<span>Also include internships</span>
+					<input type="checkbox">
+					<br>
+					
+					<div style="text-align: center;">
+						<hr WIDTH="80%" COLOR="#9c4668" SIZE="1" >
+						<h3>Search</h3>
+					</div>
+						<input type="text" placeholder=" e.g.CSE,Design,Mumbai" style="width:90%;height:30px;margin-bottom: 35px;">
+						<i class="fas fa-search" style="margin-left: -30px"></i>
+				</div>
+			</div>
+			<!--work here-->
+			<div >
+				<div class="job_box">
+				    <h2 class="job_heading">Sales Associate</h2>
+					<div style="display:flex">
+						<h3 class="job_sub_heading">Wobb</h3>
+						<img  class="job_heading_img" src="./images/company1.png">
+					</div> 
+					<i class="fas fa-home" id="job_heading_icon"></i>
+					<span class="icon_label" style="color:black">Remote</span>
+					<table cellspacing="20px" style="width:100%;margin-left:-15px">
+						<tr>
+							<td><i id="job_heading_icon" class="fas fa-play"></i><span class="icon_label">START DATE</span></td>
+							<td><i id="job_heading_icon" class="fas fa-money-bill-wave"></i><span class="icon_label">CTC</span></td>
+							<td><i id="job_heading_icon" class="far fa-hourglass"></i><span class="icon_label">APPLY BY</span></td>
+						</tr>
+						<tr>
+							<td class="icon_label">Immediately</td>
+							<td class="icon_label">3-6 LPA</td>
+							<td class="icon_label">9 August 2021</td>
+						</tr>
+					</table>
+					<div style="display: flex">
+						<button class="job_box_button" >Freshers Job</button>
+						<h3 class="job_view_detail" >View details<i style="font-size:15px;margin-left:5px" class="fas fa-chevron-right" ></i></h3>
+
+					</div>
+				</div>
+				<!--second job-->
+				<div class="job_box">
+				    <h2 class="job_heading">Digital Marketing Associate</h2>
+					<div style="display:flex">
+						<h3 class="job_sub_heading">MiM-Essay</h3>
+						<img  class="job_heading_img" src="./images/company2.png">
+					</div> 
+					<i class="fas fa-globe-americas" id="job_heading_icon"></i>
+					<span class="icon_label" style="color:black">Location</span>
+					<table cellspacing="20px" style="width:100%;margin-left:-15px">
+						<tr>
+							<td><i id="job_heading_icon" class="fas fa-play"></i><span class="icon_label">START DATE</span></td>
+							<td><i id="job_heading_icon" class="fas fa-money-bill-wave"></i><span class="icon_label">CTC</span></td>
+							<td><i id="job_heading_icon" class="far fa-hourglass"></i><span class="icon_label">APPLY BY</span></td>
+						</tr>
+						<tr>
+							<td class="icon_label">Immediately</td>
+							<td class="icon_label">6-12 LPA</td>
+							<td class="icon_label">19 November 2021</td>
+						</tr>
+					</table>
+					<div style="display: flex">
+						<button class="job_box_button" >Freshers Job</button>
+						<h3 class="job_view_detail">View details<i style="font-size:15px;margin-left:5px" class="fas fa-chevron-right" ></i></h3>
+
+					</div>
+				</div>
+				<!--third job-->
+				<div class="job_box">
+				    <h2 class="job_heading">Quantitative Aptitude Teacher</h2>
+					<div style="display:flex">
+						<h3 class="job_sub_heading">GREedge</h3>
+						<img  class="job_heading_img" src="./images/company3.png">
+					</div> 
+					<i class="fas fa-home" id="job_heading_icon"></i>
+					<span class="icon_label" style="color:black">Remote</span>
+					<table cellspacing="20px" style="width:100%;margin-left:-15px">
+						<tr>
+							<td><i id="job_heading_icon" class="fas fa-play"></i><span class="icon_label">START DATE</span></td>
+							<td><i id="job_heading_icon" class="fas fa-money-bill-wave"></i><span class="icon_label">CTC</span></td>
+							<td><i id="job_heading_icon" class="far fa-hourglass"></i><span class="icon_label">APPLY BY</span></td>
+						</tr>
+						<tr>
+							<td class="icon_label">Immediately</td>
+							<td class="icon_label">5.2 LPA</td>
+							<td class="icon_label">30 May 2021</td>
+						</tr>
+					</table>
+					<div style="display: flex">
+						<button class="job_box_button" >Freshers Job</button>
+						<h3 class="job_view_detail">View details<i style="font-size:15px;margin-left:5px" class="fas fa-chevron-right" ></i></h3>
+
+					</div>
+				</div>	
+
+				<!--forth job-->
+				<div class="job_box">
+				    <h2 class="job_heading">Associate-Business Development</h2>
+					<div style="display:flex">
+						<h3 class="job_sub_heading">Leverage Edu</h3>
+						<img  class="job_heading_img" src="./images/company4.png">
+					</div> 
+					<i class="fas fa-home" id="job_heading_icon"></i>
+					<span class="icon_label" style="color:black">Remote</span>
+					<table cellspacing="20px" style="width:100%;margin-left:-15px">
+						<tr>
+							<td><i id="job_heading_icon" class="fas fa-play"></i><span class="icon_label">START DATE</span></td>
+							<td><i id="job_heading_icon" class="fas fa-money-bill-wave"></i><span class="icon_label">CTC</span></td>
+							<td><i id="job_heading_icon" class="far fa-hourglass"></i><span class="icon_label">APPLY BY</span></td>
+						</tr>
+						<tr>
+							<td class="icon_label">Immediately</td>
+							<td class="icon_label">3.6 LPA</td>
+							<td class="icon_label">Expired</td>
+						</tr>
+					</table>
+					<div style="display: flex">
+						<button class="job_box_button" >Freshers Job</button>
+						<h3 class="job_view_detail">View details<i style="font-size:15px;margin-left:5px" class="fas fa-chevron-right" ></i></h3>
+
+					</div>
+				</div>	
+				<!--fifth job-->
+				<div class="job_box">
+				    <h2 class="job_heading">Social Media Executive</h2>
+					<div style="display:flex">
+						<h3 class="job_sub_heading">Policy 4.0</h3>
+						<img  class="job_heading_img" src="./images/company5.png">
+					</div> 
+					<i class="fas fa-home" id="job_heading_icon"></i>
+					<span class="icon_label" style="color:black">Delhi,India</span>
+					<table cellspacing="20px" style="width:100%;margin-left:-15px">
+						<tr>
+							<td><i id="job_heading_icon" class="fas fa-play"></i><span class="icon_label">START DATE</span></td>
+							<td><i id="job_heading_icon" class="fas fa-money-bill-wave"></i><span class="icon_label">CTC</span></td>
+							<td><i id="job_heading_icon" class="far fa-hourglass"></i><span class="icon_label">APPLY BY</span></td>
+						</tr>
+						<tr>
+							<td class="icon_label">Immediately</td>
+							<td class="icon_label">6.6-14 LPA</td>
+							<td class="icon_label">Expired</td>
+						</tr>
+					</table>
+					<div style="display: flex">
+						<button class="job_box_button" >Freshers Job</button>
+						<h3 class="job_view_detail">View details<i style="font-size:15px;margin-left:5px" class="fas fa-chevron-right" ></i></h3>
+
+					</div>
+				</div>	
+				<!--Sixth Job-->
+				<div class="job_box">
+				    <h2 class="job_heading">Full Stack Software Engineer</h2>
+					<div style="display:flex">
+						<h3 class="job_sub_heading">Flair Labs</h3>
+						<img  class="job_heading_img" src="./images/company6.png">
+					</div> 
+					<i class="fas fa-home" id="job_heading_icon"></i>
+					<span class="icon_label" style="color:black">Maharashtra,India</span>
+					<table cellspacing="20px" style="width:100%;margin-left:-15px">
+						<tr>
+							<td><i id="job_heading_icon" class="fas fa-play"></i><span class="icon_label">START DATE</span></td>
+							<td><i id="job_heading_icon" class="fas fa-money-bill-wave"></i><span class="icon_label">CTC</span></td>
+							<td><i id="job_heading_icon" class="far fa-hourglass"></i><span class="icon_label">APPLY BY</span></td>
+						</tr>
+						<tr>
+							<td class="icon_label">Calm</td>
+							<td class="icon_label">5 LPA</td>
+							<td class="icon_label">31 December 2022</td>
+						</tr>
+					</table>
+					<div style="display: flex">
+						<button class="job_box_button" >Freshers Job</button>
+						<h3 class="job_view_detail">View details<i style="font-size:15px;margin-left:5px" class="fas fa-chevron-right" ></i></h3>
+
+					</div>
+				</div>	
+				<!--seventh job-->
+				<div class="job_box">
+				    <h2 class="job_heading">Business Development Associate</h2>
+					<div style="display:flex">
+						<h3 class="job_sub_heading">Stewards</h3>
+						<img  class="job_heading_img" src="./images/company7.png">
+					</div> 
+					<i class="fas fa-home" id="job_heading_icon"></i>
+					<span class="icon_label" style="color:black">Mumbai</span>
+					<table cellspacing="20px" style="width:100%;margin-left:-15px">
+						<tr>
+							<td><i id="job_heading_icon" class="fas fa-play"></i><span class="icon_label">START DATE</span></td>
+							<td><i id="job_heading_icon" class="fas fa-money-bill-wave"></i><span class="icon_label">CTC</span></td>
+							<td><i id="job_heading_icon" class="far fa-hourglass"></i><span class="icon_label">APPLY BY</span></td>
+						</tr>
+						<tr>
+							<td class="icon_label">Immediately</td>
+							<td class="icon_label">4.5 LPA</td>
+							<td class="icon_label">1 December 2022</td>
+						</tr>
+					</table>
+					<div style="display: flex">
+						<button class="job_box_button" >Freshers Job</button>
+						<h3 class="job_view_detail">View details<i style="font-size:15px;margin-left:5px" class="fas fa-chevron-right" ></i></h3>
+
+					</div>
+				</div>	
+
+
+			</div>
+		</div>
+	</div>
+	<!--footer-->
+    <div id="footer">
+        <div id="first_footer">
+            <h1 style="font-size: 35px;">We're here to help</h1>
+            <h4 style="color:#9c4668">Visit our Help Center for answers to common questions or contact us directly.</h4>
+            <a href="./feedback/index.html" ><button class="footer_button">Feedback</button></a>
+            <a href="Contact_support.html" ><button class="footer_button" style="margin-left: 20px">Contact Support</button></a>
+            <br>
+            <div style="display:inline-block">
+                <h1>Solution</h1>
+                <a href="Review_story.html" class="link_footer"><h4 class="small_text_footer">Reviews</h4></a>
+                <a href="resume_builder.html" class="link_footer"><h4 class="small_text_footer">Resume</h4></a>
+            </div>
+            <div style="display: inline-block;margin-left: 20px">
+                <h1>Resources</h1>
+                <a href="How_it_works.html" class="link_footer"><h4 class="small_text_footer">How it works</h4></a>
+                <a href="FAQ.html" class="link_footer"><h4 class="small_text_footer">FAQ</h4></a>
+            </div> 
+        </div>
+        <div id="second_footer">
+            
+            <h1>Vakarien</h1>
+            <div id="footer_vakarien">
+                <a href="Open_jobs_Vakarien.html#job_heading" class="link_footer"><h4 class="small_text_footer">Why Vakarien</h4></a>
+                <a href="meet_founders.html" class="link_footer"><h4 class="small_text_footer">Meet The Founders</h4></a>
+                <a href="Failed.html" class="link_footer"><h4 class="small_text_footer">Cookies& privacy</h4></a>
+                </div>
+                <a href="Donate_us.html" ><button class="footer_button">Donate Us</button></a>
+            
+            <div id="contact_icons">
+                <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjlgeDorbzwAhVPDCsKHVF8BJIYABAAGgJzZg&ae=2&ohost=www.google.com&cid=CAESQOD2jimxu7s00ezwY1HM_qBD0C7yH-6Ezk32Mn55FpiS8HLHplRfnSTcs-DkW3zfUdKXhPzSWT5JIjTh7TRHTPY&sig=AOD64_2V5kLYi7mDRCGZIpV5Ww7Q2ntx7Q&q&adurl&ved=2ahUKEwidmtjorbzwAhW0heYKHZaRCQEQ0Qx6BAgGEAE" class="link_footer"><i  id="contact_icon" class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" class="link_footer"><i  id="contact_icon" class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="link_footer"><i  id="contact_icon" class="fab fa-linkedin"></i></a>
+                <a href="https://www.apple.com/in/" class="link_footer"><i  id="contact_icon" class="fab fa-apple"></i></a>
+                <a href="https://twitter.com/?lang=en" class="link_footer"><i  id="contact_icon" class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div style="margin-left: -180px">
+            <img src="./images/footer_human.png" id="footer_image" >
+            
+        </div>
+
+    </div>
+</body>
+<script>
+        AOS.init();
+    </script>
+    <script >
+        $(document).ready(function(){
+            $(document).bind("contextmenu",function(e){
+  return false;
+    });
+        })
+    </script>
+</html>

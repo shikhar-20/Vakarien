@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+<style>
+
+* {
+
+  box-sizing: border-box;
+
+}
+    #div1{
+      font-family: calibri;
+      background-color: #003568;
+      padding: 30px;
+
+
+     
+
+    }
+    #main_div{ 
+      display: flex;
+      justify-content: space-around;
+      background-color: #f1f1f1;
+
+      
+    }
+
+    #col1{
+      width: 45%;
+      font-family: calibri;
+
+      
+
+    }
+    #col2{
+      width: 45%;
+      font-family: calibri;
+      
+
+    }
+
+
+input[type=text], select, textarea {
+
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 4px;
+
+  resize: vertical;
+
+}
+
+
+
+label {
+
+  padding: 12px 12px 12px 0;
+
+  display: inline-block;
+
+}
+
+
+
+.container {
+	margin-top: 5%;
+
+  border-radius: 5px;
+
+  background-color: #f2f2f2;
+
+  padding: 20px;
+
+}
+
+
+
+.col-25 {
+
+  float: left;
+
+  width: 25%;
+
+  margin-top: 6px;
+
+}
+
+
+
+.col-75 {
+
+  float: left;
+
+  width: 75%;
+
+  margin-top: 6px;
+
+}
+
+
+
+/* Clear floats after the columns */
+
+.row:after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+
+  .col-25, .col-75, input[type=submit] {
+
+    width: 100%;
+
+    margin-top: 0;
+
+  }
+
+}
+
+/*BUTTONNNNNN */
+
+.button {
+
+  background-color: #4CAF50;
+
+  border: none;
+
+  color: white;
+
+  padding: 15px 32px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  margin-left: 50%;
+  margin-top: 5%;
+
+  display: inline-block;
+  
+  border-radius: 10px;
+  
+
+  cursor: pointer;
+
+}
+
+*:focus{
+            outline:none;
+        }
+    ::-webkit-scrollbar {
+          width: 11px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1; 
+          border-radius: 10px;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #888; 
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<div id="div1">
+<p style="font-family: calibri; text-align: center; font-size: 50px; color: white;" >Make Your Resume Here</p>
+<p style="font-family: calibri; text-align: center; font-size: 20px; margin-top: -30px; color: white;" >Our CV Builder helps you create a CV and find a job around you. You can save it or print it directly.</p>
+</div>
+
+
+<div class="container">
+
+  <form action="/action_page.php">
+
+    <!-- PERSONAL INFORMATIONNN--> 
+
+<!-- NAME INFO--> 
+
+<div id="main_div"; style="margin-top: -80px;">
+  <div id="col1"> 
+
+
+        <h2>PERSONAL INFORMATON</h2>
+    
+        <label for="fname">First Name</label>
+
+        <input type="text" id="fname" name="firstname" placeholder="Your name.."> <br>
+
+        <label for="lname">Last Name</label>
+    
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.."> <br>
+
+        <label for="cnumber">Contact Number</label>
+
+        <input type="text" id="cnumber" name="contactnumber" placeholder="Your contact number.."> <br>
+
+
+        <label for="position">Position</label>
+
+
+        <input type="text" id="aposition" name="position" placeholder="Position you need...">  <br>
+
+        <label for="email">Email</label>
+
+        <input type="text" id="email" name="email" placeholder="Your Email..."> 
+    
+  </div>
+  <div id="col2">
+
+    <!-- PROFESSIONAL INFORMATION--> 
+
+<h2>PROFESSIONAL DETAILS</h2><br>
+
+<!-- QUALIFICATIONNNNN-->
+
+    <div class="row">
+
+      <div class="col-25">
+
+
+
+
+        <label for="qualification">Your Qualification</label>
+
+      </div>
+
+      <div class="col-75">
+
+        <select id="Your Qualification" name="Your Qualification">
+
+          <option value="select">Select</option>
+
+          <option value="student">Student</option>
+
+          <option value="under graduate">Under Graduate</option>
+
+          <option value="post graduate">Post Graduate</option>
+
+          <option value="working">Working</option>
+
+        </select>
+
+      </div>
+
+    </div><br>
+    
+
+    <!-- Work experienceee-->
+
+  <div class="row">
+
+      <div class="col-25">
+
+
+
+        <label for="workexperience">Work Experience</label>
+
+      </div>
+
+      <div class="col-75">
+
+        <select id="Work Experience" name="Work Experience">
+
+          <option value="select">Select</option>
+
+          <option value="0-5">0-5</option>
+
+          <option value="5-10">5-10</option>
+
+          <option value="10-15">10-15</option>
+
+          <option value="15-20">15-20</option>
+
+          <option value="None">None</option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+    <!--EXPERIENCE-->
+
+    <div class="row">
+
+      <div class="col-25">
+
+        <label for="objective">Experience</label>
+
+      </div>
+
+      <div class="col-75">
+
+        <textarea id="objective" name="Experience" placeholder="Experience..." ></textarea>
+        
+
+      </div><br>
+
+
+    <!--- about youuuu-->
+    <div class="row">
+
+      <div class="col-25">
+
+        <label for="objective">About You</label>
+
+      </div>
+
+      <div class="col-75">
+
+        <textarea id="objective" name="AboutYou" placeholder="About You..." ></textarea>
+        
+
+      </div><br>
+
+
+      <!--- skillss and achievementss-->
+    <div class="row">
+
+      <div class="col-25">
+
+        <label for="objective">Skills & Achievements</label>
+
+      </div>
+
+      <div class="col-75">
+
+        <textarea id="objective" name="skills&Achievements" placeholder="Write..." ></textarea>
+        
+
+      </div><br>
+
+    <!-- OBJECTIVESS--> 
+
+    <div class="row">
+
+      <div class="col-25">
+
+        <label for="objective">Objective</label>
+
+      </div>
+
+      <div class="col-75">
+
+        <textarea id="objective" name="objective" placeholder="Write..." style="height: 100px;" ></textarea>
+        
+
+      </div><br>
+      
+
+    </div>
+    
+
+  </form>
+
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+<div>
+	<button class="button" onclick="document.location='CVVV FORMED.html'">Genarate CV</button>
+</div>
+<br><br><br>
+
+</body>
+<script >
+        $(document).ready(function(){
+            $(document).bind("contextmenu",function(e){
+  return false;
+    });
+        })
+    </script>
+</html>
+

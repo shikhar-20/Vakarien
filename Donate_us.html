@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donate us</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+    	$(document).ready(function(){
+    		$("#amount5").click(function(){
+    			document.getElementById("input_amount").value="500";
+    		});
+    		$("#amount1").click(function(){
+    			document.getElementById("input_amount").value="1000";
+    		});
+    		$("#amount2").click(function(){
+    			document.getElementById("input_amount").value="2000";
+    		});
+    		$("#amount4").click(function(){
+    			document.getElementById("input_amount").value="4000";
+    		})
+    	})
+    </script>
+    <script>
+    	function submit(){
+    		var form=true;
+    		var f_name=document.getElementById("first_name").value;
+    		if(f_name==""){
+    			document.getElementById("text_warning1").style.display="block";
+                document.getElementById("first_name").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			document.getElementById("text_warning1").style.display="none";
+                document.getElementById("first_name").style.border="none";
+    		}
+
+    		var l_name=document.getElementById("last_name").value;
+    		if(l_name==""){
+    			document.getElementById("text_warning2").style.display="block";
+                document.getElementById("last_name").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			document.getElementById("text_warning2").style.display="none";
+                document.getElementById("last_name").style.border="none";
+    		}
+
+    		var mail=document.getElementById("mail").value;
+    		if(mail==""){
+    			document.getElementById("text_warning3").style.display="block";
+                document.getElementById("mail").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			var i=0;
+	    		var len=mail.length;
+	    		var valid_email=false;
+	    		while(i<len){
+	    			if(mail[i]=="@"){
+	    				valid_email=true;
+	    				break;
+	    			}
+	    			i=i+1;
+	    		}
+	    		if(valid_email==false){
+	    			document.getElementById("text_warning6").style.display="block";
+	    			document.getElementById("text_warning3").style.display="none";
+                    document.getElementById("mail").style.border=" 0.5px solid #9c4668";
+	    			form=false;
+	    		}
+	    		else {
+	    			document.getElementById("text_warning6").style.display="none";
+                    document.getElementById("mail").style.border="none";
+	    		}
+    		}
+
+    		var number=document.getElementById("mobile_number").value;
+    		if(number==""){
+    			document.getElementById("text_warning4").style.display="block";
+                document.getElementById("mobile_number").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			i=0;
+	    		len=number.length;
+	    		if(len!=10){
+	    			document.getElementById("text_warning7").style.display="block";
+	    			document.getElementById("text_warning4").style.display="none";
+                    document.getElementById("mobile_number").style.border=" 0.5px solid #9c4668";
+	    			form=false;
+	    		}
+	    		else {
+	    			var valid_number=false;
+		    		while(i<len){
+		    			if(number.charCodeAt(i)<48 || number.charCodeAt(i)>57){
+		    				document.getElementById("text_warning7").style.display="block";
+		    				document.getElementById("text_warning4").style.display="none";
+                            document.getElementById("mobile_number").style.border=" 0.5px solid #9c4668";
+
+                            form=false;
+		    				break;
+		    			}
+		    			else {
+		    				document.getElementById("text_warning7").style.display="none";
+                            document.getElementById("mobile_number").style.border="none";
+		    			}
+		    			i=i+1;
+		    		}
+	    		}
+    		}
+    		var street=document.getElementById("street").value;
+    		if(street==""){
+    			document.getElementById("text_warning8").style.display="block";
+                document.getElementById("street").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			document.getElementById("text_warning8").style.display="none";
+                document.getElementById("street").style.border="none";
+    		}
+    		var city=document.getElementById("city").value;
+    		if(city==""){
+    			document.getElementById("text_warning9").style.display="block";
+                document.getElementById("city").style.border=" 0.5px solid #9c4668";
+    			form=false;
+    		}
+    		else {
+    			document.getElementById("text_warning9").style.display="none";
+                document.getElementById("city").style.border="none";
+    		}
+
+            var card_valid=true;
+            var card=document.getElementById("card").value;
+            if(card==""){
+                document.getElementById("card").style.border="1px solid #9c4668";
+                form=false;
+                card_valid=false;
+            }
+            else{
+                var reg=/\d{4}\s\d{4}\s\d{4}\s\d{4}/;
+                var res = reg.test(card);
+                if(res==true){
+                     document.getElementById("card").style.border="none";
+                }
+                else{
+                    document.getElementById("card").style.border=" 1px solid #9c4668";
+                    card_valid=false;
+                    form=false;
+                }
+            }
+
+            var expire=document.getElementById("expire").value;
+            if(expire==""){
+                document.getElementById("expire").style.border="1px solid #9c4668";
+                form=false;
+                card_valid=false;
+            }
+            else{
+                var reg=/\d{2}[/]\d{2}/;
+                var res = reg.test(expire);
+                if(res==true){
+                     document.getElementById("expire").style.border="none";
+                }
+                else{
+                    document.getElementById("expire").style.border=" 1px solid #9c4668";
+                    card_valid=false;
+                    form=false;
+                }
+            }
+
+            var cvv=document.getElementById("cvv").value;
+            if(cvv==""){
+                document.getElementById("cvv").style.border="1px solid #9c4668";
+                form=false;
+                card_valid=false;
+            }
+            else{
+                var reg=/\d{3}/;
+                var res = reg.test(cvv);
+                if(res==true){
+                     document.getElementById("cvv").style.border="none";
+                }
+                else{
+                    document.getElementById("cvv").style.border=" 1px solid #9c4668";
+                    card_valid=false;
+                    form=false;
+                }
+            }
+            if(card_valid==false){
+                alert("Enter your card details correctly.... Hint:give space in card number ,include slash  in Expiration");
+                form=false;
+            }
+
+            if(form==true){
+                if(confirm("Ready to donate")){
+                    alert("Redirecting to payment page");
+                    window.location.href="Payment_thanks.html";
+                }
+            }
+    	}
+    </script>
+    <style>
+    	#header_image{
+			margin-top: 20px;
+			height:70px;
+			width:200px;
+		}
+        html{
+            scroll-behavior: smooth;
+        }
+		body{
+			overflow-x: hidden;
+			background-color: #eff3f5;
+		}
+        *:focus{
+            outline:none;
+        }
+		::-webkit-scrollbar {
+          width: 11px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1; 
+          border-radius: 10px;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #888; 
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+        #contact_home{
+			font-family: calibri;
+			font-size:22px;
+			color:#9c4668;
+			font-weight:550;
+		}
+		#main_image_donate{
+			background-image: url("./images/donate.jpg");
+			height:100vh;
+			width:100vw;
+			background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left:-10px;
+            margin-top: -10px;
+            display:flex;
+            flex-direction: column-reverse;
+		}
+		#job_heading{
+    		font-family: calibri;
+    		color:white;
+    		font-size: 70px;
+    		padding-left:40px;
+    		margin-bottom: 80px;
+    		font-weight: 540;
+    		animation-name: down_top;
+    		animation-iteration-count: 1;
+    		animation-duration: 5s;
+    	}
+    	@keyframes down_top{
+    		0%{
+    			opacity: 0;
+    		    transform: translateY(40px);
+    		}
+    		50%{
+    			opacity: 0.5;
+    		}
+    		100%{
+    			opacity:1;
+    			transform: translateY(0);
+    		}
+    	}
+    	#center_div{
+    		
+    		width:60%;
+    		font-family: calibri;
+    	}
+    	.amount{
+    		width:23%;
+    		height:40px;
+    		margin-right:10px;
+    		background-color: #e4e1e1;
+    		border:none;
+    		font-size:18px;
+    		border-radius: 5px;
+    		transition-duration: 1s;
+    	}
+    	.amount:hover{
+    		background-color: #bababa;
+    		cursor: pointer;
+    	}
+    	#input_amount{
+    		height:55px;
+    		width:30%;
+    		margin-top: 20px;
+    		font-size:25px;
+    	}
+    	#payment{
+    		width:100%;
+    		height:230px;
+    		border-radius: 7px;
+    		background-color: #e4e1e1;
+    	}
+    	.text{
+    		font-size:20px;
+    		margin-left: 15px;
+    		padding-top: 20px;
+    	}
+    	#card{
+    		width:95%;
+    		height:40px;
+    		font-size: 16px;
+    	}
+    	.card_digits{
+    		width:60px;
+    		height:35px;
+    		font-size: 17px;
+    		text-align: center;
+    		margin-left: 17px;
+    	}
+    	#form_section{
+			font-family: calibri;
+			width:100%;
+			
+			color:#0c1027;
+		}
+		.form_label{
+			font-size: 18px;
+		}
+		.form_input{
+			width:100%;
+			height:35px;
+			
+			border:0.5px solid grey;
+			margin-top: -15px;
+		}
+		.star_mandatory{
+			color:#9c4668;
+
+		}
+		.text_warning{
+        	color:#9c4668;
+        	margin-top:0px;
+        	display: none;
+        }
+        #submit_form{
+			height:40px;
+			width:130px;
+			color: white;
+			background-color: #0c1027;
+			border-radius: 20px;
+			border:none;
+			margin-top: 20px;
+			font-weight: 550;
+            transition-duration: 0.5s;
+
+		}
+        #submit_form:hover{
+            cursor:pointer;
+            background-color: #9c4668;
+        }
+        @media screen and (max-width: 1080px){
+        	#center_div{
+                margin-left: 0.5%;
+	    		width:100%;
+	    		font-family: calibri;
+    		}
+    		.amount{
+    			margin-right:5px; 
+    		}
+        }
+        @media screen and (max-width:500px){
+            .amount{
+                margin-right: 2px;
+            }
+        }
+        #footer{
+            width:100%;
+            background-color: #f1f1f1;
+            height:60%;
+            display:flex;
+            font-family: calibri;
+            margin-top: -20px;
+        }
+        #first_footer{
+            width:40%;
+            margin-left: 80px;
+            margin-top: 25px;
+            margin:;
+            height:100%;
+        }
+        #second_footer{
+            margin-top: 25px;
+            margin-left: 30px;
+            width:30%;
+            height:100%;
+        }
+        .footer_button{
+            height:35px;
+            font-size: 15px;
+            font-weight:550;
+            color:#0c1027;
+            width:30%;
+            border-color: #0c1027;
+            background-color: white;
+            border-radius: 10px;
+            transition-duration: 1s;
+        }
+        .footer_button:hover{
+            background-color: #9c4668;
+            cursor: pointer;
+        }
+        .small_text_footer{
+            color:#9c4668;
+            font-family: calibri;
+        }
+        #contact_icons{
+            margin-top: 40px;
+            font-size: 20px;
+        }
+        #contact_icon{
+            margin-right: 15px;
+            color:#0c1027;
+            transition-duration: 1s;
+        }
+        #contact_icon:hover{
+            color:#9c4668;
+        }
+        .link_footer{
+            text-decoration: none;
+        }
+        @media screen and (max-width: 950px){
+            #footer_image{
+                display: none;
+            }
+            #footer_vakarien{
+                display: flex;
+            }
+            #first_footer{
+                width:100%;
+                margin-left: 15px;
+            }
+            #second_footer{
+                width:100%;
+                margin-left: 15px;
+                margin-top: 0px;
+            }
+            .small_text_footer{
+                margin-right: 10px;
+                margin-top: -19px;
+            }
+            #footer{
+                display: block;
+            }
+            .footer_button{
+                margin-top: -10px;
+            }
+
+        }
+        #lock{
+            margin-left: 17px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+	<!--header-->
+<!-- 	<div style="width:100vw;text-align: center">
+		<img src="vakarien.jpg" id="header_image">
+		<br>
+		
+	</div> -->
+	
+	<!--image-->
+	<div id="main_image_donate">
+		<span id="job_heading">Donate and change<br> lives forever</span>
+	</div>
+	<div style="margin-top: 20px">
+			<a href="VAKARIEN.html" style="text-decoration: none"><span id="contact_home">Home</span></a><span id="contact_home" style="color:#0c1027;font-size:18px">> DONATE</span>
+			
+	</div>
+	<!--center-->
+	<div style="width:100%;display:flex;justify-content: center;color:#0c1027">
+		<div id="center_div">
+			<h3 style="color:#9c4668"><span style="color:#0c1027">Vakarien being the most used websites for finding jobs...We always prefer to help others especially the unemployed one. Every year We donate our 70% of the profit and donation given by you to the people who don't even know how to survive in today's world.</span><br><br>Your donation empowers families living in poverty with lasting access to safe water and the hope, health and opportunity it brings.</h3>
+			<br>
+			<HR WIDTH="100%" COLOR="lightgrey" SIZE="1"  id="line">
+			<h3 style="color:#0c1027;">Choose a Donation Amount</h3>
+			<button class="amount" id="amount5"><span>&#8377;</span>500</button>
+			<button class="amount" id="amount1"><span>&#8377;</span>1000</button>
+			<button class="amount" id="amount2"><span>&#8377;</span>2000</button>
+			<button class="amount" id="amount4"><span>&#8377;</span>4000</button>
+			<br>
+			<input type="number" placeholder="Amount in &#8377" id="input_amount">
+			<input type="radio" name="time">One-time donation
+			<input type="radio" name="time">Monthly donation
+			<h3 style="color:#0c1027;">Payment Information</h3>
+			<span >PAY BY CREDIT CARD</span>
+			<div id="payment">
+				<h4 class="text" >Card Number</h4>
+				<div style="text-align: center;width:100%">
+					<input type="text" maxlength="19" placeholder="1234 4567 4321 7654" id="card">
+				</div>
+				<div style="margin-top: 20px;">
+					<span class="text" style="font-size: 15px" >Expiration</span>
+					<span class="text" style="font-size: 15px">Verification</span>
+					<br>
+					<input type="text" maxlength="5" placeholder="MM/YY" class="card_digits" id="expire">
+					<input type="text" maxlength="3" placeholder="CVV" class="card_digits" id="cvv">
+				</div>
+                <i class="fas fa-lock" id="lock"></i>
+                <span> Secure transaction</span>
+			</div>
+			<br>
+			<input type="checkbox">I am donating on behalf of a business or organization
+			<br>
+			<div id="form_section">
+				<h3 class="form_label">First Name<span class="star_mandatory">*</span></h3>
+				<input type="text" class="form_input" id="first_name" required>
+				<h6 class="text_warning" id="text_warning1">This field cannot be left empty!!</h6>
+
+				<h3 class="form_label">Last Name<span class="star_mandatory">*</span></h3>
+				<input type="text" class="form_input" id="last_name" required>
+				<h6 class="text_warning" id="text_warning2">This field cannot be left empty!!</h6>
+
+				<h3 class="form_label">Email Address<span class="star_mandatory">*</span></h3>
+				<input type="email" class="form_input" id="mail" required>
+				<h6 class="text_warning" id="text_warning3">This field cannot be left empty!!</h6>
+				<h6 class="text_warning" id="text_warning6">Please include an '@' in the email address</h6>
+
+				<h3 class="form_label">Mobile Number<span class="star_mandatory">*</span></h3>
+				<input type="text" class="form_input" maxlength="10" id="mobile_number" required>
+				<h6 class="text_warning" id="text_warning4">This field cannot be left empty!!</h6>
+				<h6 class="text_warning" id="text_warning7">Mobile Number entered is not valid!!</h6>
+
+				<h3 class="form_label">Street Address<span class="star_mandatory">*</span></h3>
+				<input type="text" class="form_input" id="street" required>
+				<h6 class="text_warning" id="text_warning8">This field cannot be left empty!!</h6>
+				
+				<h3 class="form_label">City<span class="star_mandatory">*</span></h3>
+				<input type="text" class="form_input" id="city" required>
+				<h6 class="text_warning" id="text_warning9">This field cannot be left empty!!</h6>
+
+				<input type="checkbox">I would like this donation to be made in honor of someone. (Note: An eCard will be sent to one honoree per donation.)
+				<div style="width:100%">
+					<button id="submit_form" onclick="submit()" type="submit">
+						Donate Now
+					</button>
+				</div>
+		</div>
+		</div>
+	</div>
+	<!--footer-->
+    <div id="footer">
+        <div id="first_footer">
+            <h1 style="font-size: 35px;">We're here to help</h1>
+            <h4 style="color:#9c4668">Visit our Help Center for answers to common questions or contact us directly.</h4>
+            <a href="./feedback/index.html" ><button class="footer_button">Feedback</button></a>
+            <a href="Contact_support.html" ><button class="footer_button" style="margin-left: 20px">Contact Support</button></a>
+            <br>
+            <div style="display:inline-block">
+                <h1>Solution</h1>
+                <a href="Review_story.html" class="link_footer"><h4 class="small_text_footer">Reviews</h4></a>
+                <a href="resume_builder.html" class="link_footer"><h4 class="small_text_footer">Resume</h4></a>
+            </div>
+            <div style="display: inline-block;margin-left: 20px">
+                <h1>Resources</h1>
+                <a href="How_it_works.html" class="link_footer"><h4 class="small_text_footer">How it works</h4></a>
+                <a href="FAQ.html" class="link_footer"><h4 class="small_text_footer">FAQ</h4></a>
+            </div> 
+        </div>
+        <div id="second_footer">
+            
+            <h1>Vakarien</h1>
+            <div id="footer_vakarien">
+                <a href="Open_jobs_Vakarien.html#job_heading" class="link_footer"><h4 class="small_text_footer">Why Vakarien</h4></a>
+                <a href="meet_founders.html" class="link_footer"><h4 class="small_text_footer">Meet The Founders</h4></a>
+                <a href="Failed.html" class="link_footer"><h4 class="small_text_footer">Cookies& privacy</h4></a>
+                </div>
+                <a href="Donate_us.html" ><button class="footer_button">Donate Us</button></a>
+            
+            <div id="contact_icons">
+                <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjlgeDorbzwAhVPDCsKHVF8BJIYABAAGgJzZg&ae=2&ohost=www.google.com&cid=CAESQOD2jimxu7s00ezwY1HM_qBD0C7yH-6Ezk32Mn55FpiS8HLHplRfnSTcs-DkW3zfUdKXhPzSWT5JIjTh7TRHTPY&sig=AOD64_2V5kLYi7mDRCGZIpV5Ww7Q2ntx7Q&q&adurl&ved=2ahUKEwidmtjorbzwAhW0heYKHZaRCQEQ0Qx6BAgGEAE" class="link_footer"><i  id="contact_icon" class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" class="link_footer"><i  id="contact_icon" class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="link_footer"><i  id="contact_icon" class="fab fa-linkedin"></i></a>
+                <a href="https://www.apple.com/in/" class="link_footer"><i  id="contact_icon" class="fab fa-apple"></i></a>
+                <a href="https://twitter.com/?lang=en" class="link_footer"><i  id="contact_icon" class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div style="margin-left: -180px">
+            <img src="./images/footer_human.png" id="footer_image" >
+            
+        </div>
+
+    </div>
+</body>
+<script >
+        $(document).ready(function(){
+            $(document).bind("contextmenu",function(e){
+  return false;
+    });
+        })
+    </script>
+</html>

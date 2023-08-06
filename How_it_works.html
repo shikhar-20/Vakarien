@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How it works</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script>
+		$(document).ready(function(){
+			 $("#navigation_button").click(function(){
+                $("#show_navigation_buttons").toggle();
+                $("navigation_button").css("border","none");
+                //     $("#show_navigation_buttons").css("display","flex");
+                // });
+            });
+		})
+	</script>
+	<style>
+		html{
+            scroll-behavior: smooth;
+        }
+        body{
+        	overflow-x:hidden;
+        }
+	#home_name_website{
+            text-decoration: none;
+            padding-top:20px;
+            /*color: transparent;*/
+            color: #0c1027;
+            font-size:25px;
+            font-family: calibri;
+            animation-name:website_name;
+            animation-iteration-count:1;
+            animation-duration:15s;
+            padding-left: 8%;
+            position: fixed;
+            -webkit-text-stroke:0.5px #0c1027;
+            /*padding-right:210px;*/
+
+        }
+        #show_navigation_buttons{
+            width:100%;
+            height:100%;
+            background-color:#0c1027;
+
+            color:#9c4668;
+            font-family: calibri;
+            font-size:30px;
+            display: none;
+            line-height: 20px;
+            text-align: center;
+            margin-top: -20px;
+            position: fixed;
+            z-index:9;
+        }
+        .navigation_bar_list{
+            transition-duration: 1s;
+            color:#9c4668;
+        }
+        .navigation_bar_list:hover{
+            color:white;
+            
+        }
+        #home_header_space{
+            height:120px;
+            width:100%;
+            background-color: white;
+            margin-top:-30px;
+            display:flex;
+            position: fixed;
+           
+            z-index: 10;
+        }
+        #home_name_all{
+            display:flex;
+            margin-left: 45%;
+            padding-top: 38px;
+            font-size:21px;
+            font-weight: 600;
+            color:#0c1027;
+            font-family: calibri;
+            justify-content: space-around;
+            list-style-type: none;
+            width:50%;
+            position: absolute;
+        }
+        @keyframes website_name{
+            0%{
+                color:#0c1027;
+                 
+                clip-path: polygon(0% 100%, 0% 90%, 14% 87%, 26% 92%, 42% 87%, 52% 90%, 69% 93%, 79% 87%, 92% 92%, 100% 100%);
+            }
+            20%{
+                color:#0c1027;
+                 
+                clip-path: polygon(0% 100%, 0 79%, 8% 74%, 20% 82%, 33% 81%, 51% 86%, 67% 87%, 78% 81%, 100% 78%, 100% 100%);
+            }
+            40%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 55%, 16% 65%, 25% 73%, 40% 75%, 54% 69%, 68% 72%, 81% 65%, 100% 49%, 100% 100%);
+            }
+            60%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 50%, 13% 54%, 18% 49%, 29% 51%, 41% 49%, 56% 41%, 72% 34%, 100% 25%, 100% 100%);
+            }
+            80%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 21%, 16% 29%, 27% 31%, 43% 30%, 67% 14%, 84% 9%, 93% 7%, 100% 8%, 100% 100%);
+            }
+            100%{
+                color:#0c1027;
+                
+                clip-path: polygon(0% 100%, 0 0, 18% 0, 29% 0, 49% 0, 67% 0, 88% 0, 96% 0, 100% 0, 100% 100%);
+                -webkit-text-stroke:0px #0c1027;
+            }
+            
+        }
+        #navigation_bar{
+            display:none;
+            /*outline:none;*/
+
+        }
+        #set_sign_in{
+            width:100px;
+            color:white;
+            background-color: #0c1027;
+            height: 100px;
+            margin-top: -38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (max-width: 1050px) {
+            .set{
+                display: none;
+            }
+            #navigation_bar{
+                display: flex;
+                color:#0c1027;
+                justify-content: flex-end;
+            }
+            #set_sign_in{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 800px){
+            
+            #home_name_all{
+                position:sticky;
+                margin-left: 390px;
+            }
+             #navigation_bar{
+               /* position: fixed;*/
+            }
+
+        }
+        .link{
+            text-decoration: none;
+            color:#0c1027;
+            font-family: calibri;
+        }
+        .link:hover{
+            text-decoration: underline;
+        }
+    	::-webkit-scrollbar {
+          width: 11px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1; 
+          border-radius: 10px;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #888; 
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+        #starting_intro{
+        	height:280px;
+        	width:410px;
+        	color:#0c1027;
+        	font-family: calibri;
+        	font-size: 23px;
+        	background-color: white;
+        	border-top:5px solid #0c1027; 
+        	margin-left:170px; 
+        	margin-top: 80px;
+        	z-index: 8;
+        	position: absolute;
+        	border-radius: 5px;
+        }
+        #create_account{
+        	background-color: #0c1027;
+        	color:white;
+        	border-radius: 18px;
+        	margin-left: 25px;
+        	border:none;
+        	font-size: 20px;
+        	width:70%;
+        	height:50px;
+        }
+        #intro_video{
+        	
+        	margin-left: 420px;
+        	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        	z-index: 1;
+        }
+        .section{
+        	display: flex;
+        	height:90vh;
+        	width:98vw;
+        	justify-content: center;
+        	align-items: center;
+        	overflow:hidden;
+        }
+        .work_image{
+        	width:50%;
+        	height:400px;
+        }
+        .work_written{
+        	width:50%;
+        	font-family: calibri;
+        	height:200px;
+        }
+        .work_heading{
+        	color:#0c1027;
+        }
+        .work_explaination{
+        	color:#9c4668;
+        }
+        #How_it_works_special1_img{
+        	width:35%;
+        	height:280px;
+        	margin-right: 130px;
+        }
+        #How_it_works_special2_img{
+        	width:35%;
+        	height:200px;
+        }
+        #How_it_works_special2_text{
+        	margin-left: -130px;
+        	margin-right: 50px;
+        }
+        #screen_question{
+        	display:flex;
+        	width:100%;
+        	height:90%;
+        }
+        #screen_question_img{
+        	width:55%;
+        	height:60%;
+        	
+        }
+        #screen_question_text{
+        	margin-left: 80px;
+        	margin-top: 120px;
+        	font-family: calibri;
+        	font-weight: bold;
+        	color:#0c1027;
+        	width:30%;
+        }
+        .answer_question{
+        	color:#9c4668;
+        	font-size: 22px;
+        	font-family: calibri;
+        }
+        .heading_question{
+        	color:#0c1027;
+        }
+
+        @media screen and (max-width: 950px){
+        	#starting_intro{
+        		width:95%;
+        		display: block;
+        		margin:auto;
+        		margin-top: -10px;
+        	}
+        	#intro_video{
+        		margin: auto;
+        		display:block;
+        		width:95%;
+        		height: 70%;
+        		margin-top: 250px;
+        	}
+        	.section{
+        		display:block;
+        		height:100%;
+        	}
+        	.work_image{
+
+        		width:99%;
+        		margin:auto;
+        	}
+
+        	.work_written{
+        		width:99%;
+        		margin-left:15px;
+        	}
+        	#How_it_works_special1_img{
+        		width:80%;
+        		margin-left: 20px;
+        	}
+        	#How_it_works_special2_img{
+        		width:80%;
+        		margin-left: 20px;
+        	}
+        	#How_it_works_special2_text{
+        		margin-left: 15px;
+        	}
+        	#screen_question_img{
+        		width:100%;
+        		height: 80%;
+        	}
+        	#screen_question_text{
+        		margin-left: 0px;
+        		margin-top: 10px;
+        		width:100%;
+        	}
+        	#screen_question{
+        		display: block;
+        	}
+
+        }
+        #footer{
+            width:100%;
+            background-color: #f1f1f1;
+            height:60%;
+            display:flex;
+            font-family: calibri;
+            margin-top: -20px;
+        }
+        #first_footer{
+            width:40%;
+            margin-left: 80px;
+            margin-top: 25px;
+            margin:;
+            height:100%;
+        }
+        #second_footer{
+            margin-top: 25px;
+            margin-left: 30px;
+            width:30%;
+            height:100%;
+        }
+        .footer_button{
+            height:38px;
+            font-size: 15px;
+            font-weight:550;
+            color:#0c1027;
+            width:30%;
+            border-color: #0c1027;
+            background-color: white;
+            border-radius: 10px;
+            transition-duration: 1s;
+        }
+        .footer_button:hover{
+            background-color: #9c4668;
+            cursor: pointer;
+        }
+        .small_text_footer{
+            color:#9c4668;
+            font-family: calibri;
+        }
+        #contact_icons{
+            margin-top: 40px;
+            font-size: 20px;
+        }
+        #contact_icon{
+            margin-right: 15px;
+            color:#0c1027;
+            transition-duration: 1s;
+        }
+        #contact_icon:hover{
+            color:#9c4668;
+        }
+        .link_footer{
+            text-decoration: none;
+        }
+        @media screen and (max-width: 950px){
+            #footer_image{
+                display: none;
+            }
+            #footer_vakarien{
+                display: flex;
+            }
+            #first_footer{
+                width:100%;
+                margin-left: 15px;
+            }
+            #second_footer{
+                width:100%;
+                margin-left: 15px;
+                margin-top: 0px;
+            }
+            .small_text_footer{
+                margin-right: 10px;
+                margin-top: -19px;
+            }
+            #footer{
+                display: block;
+            }
+            .footer_button{
+                margin-top: -10px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+	<!--Header-->
+    <div id="home_header_space">
+            <a href="VAKARIEN.html" id="home_name_website" ><img style="height:70px;width:200px;margin-top: 20px"src="./images/vakarien.jpg"></a>
+            <ul id="home_name_all">
+                <a href="VAKARIEN.html" class="link"><li class="set" id="HOME">HOME</li></a>
+                <a href="Open_jobs_Vakarien.html" class="link"><li class="set" id="OPEN_JOBS">OPEN JOBS</li></a>
+                <a href="./for_employers/index.html" class="link"><li class="set" id="EMPLOYERS">EMPLOYERS</li></a>
+                <a href="About_Us.html" class="link"><li class="set" id="ABOUT_US">ABOUT US</li></a>
+                <a href="./login_page/index.html" class="link"><li class="set" id="set_sign_in">SIGN IN</li></a>
+                <button style="background-color: transparent;border:none;font-size: 25px;" id="navigation_button"><i id="navigation_bar" class="fas fa-bars"></i></button>
+            </ul>
+    </div>
+     <div id="show_navigation_buttons">
+                <ul style="list-style-type: none;">
+                    <a href="VAKARIEN.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px;margin-top: 160px" class="navigation_bar_list">HOME</li></a>
+                    <a href="Open_jobs_Vakarien.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px" class="navigation_bar_list">OPEN JOBS</li></a>
+                    <a href="./for_employers/index.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px" class="navigation_bar_list">EMPLOYERS</li></a>
+                    <a href="About_Us.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px" class="navigation_bar_list">ABOUT US</li></a>
+                    <a href="./login_page/index.html" style="text-decoration: none;color:white"><li style="margin-bottom:55px"class="navigation_bar_list">SIGN IN</li></a>
+                </ul>
+            </div>
+    <!--video-->
+    <div style="padding-top: 120px;background-color: #f1f1f1">
+    	<div id="starting_intro" data-aos="zoom-out-down">
+    		<h1 style="margin-left: 25px;">Find Qualified Candidates Fast</h1>
+    		<h5 style="color:#9c4668;margin-top: -15px;margin-left: 25px;">Watch our video to learn how... or read on.</h5>
+    		<a href="./login_page/index.html"><button id="create_account">
+    			Create a FREE account
+    		</button></a>
+    	</div>
+    	<video id="intro_video" width='800' height='450'
+		       onmouseenter="this.play();"
+		       onmouseleave="this.pause();"
+		       src="video.mp4" loop>
+		  Your browser does not support the video tag.
+		</video>
+    </div>
+    <!--start-->
+    <div id="started">
+	    <div class="section">
+	    	<img src="./images/howitworks3.png" class="work_image" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">
+	    	<div class="work_written" data-aos="fade-left">
+	    		<h1 class="work_heading">
+	    			1. Send Your Job to Top Sites with One Click
+	    		</h1>
+	    		<h2 class="work_explaination">
+	    			Our customizable templates make it easy to write your job description. Then, with just one click, we send your job out to 100+ top job sites.
+	    		</h2>
+	    	</div>
+	    </div>
+	    
+	     <div class="section">
+	    	
+	    	<div class="work_written" data-aos="fade-right">
+	    		<h1 class="work_heading">
+	    			2. Get Instantly Matched
+	    		</h1>
+	    		<h2 class="work_explaination">
+	    			Our powerful matching technology scans thousands of resumes to find candidates with the right skills, education, and experience for your job - then actively invites them to apply.
+	    		</h2>
+	    	</div>
+	    	<img src="./images/howitworks.png" class="work_image" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" >
+	    </div>
+
+	    <div class="section">
+	    	<img src="./images/howitworks2.png" class="work_image"  id="How_it_works_special1_img" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">
+	    	<div class="work_written" data-aos="fade-left">
+	    		<h1 class="work_heading">
+	    			3. Invite to Apply
+	    		</h1>
+	    		<h2 class="work_explaination">
+	    			Use this feature to automatically send a pre-written, personal message to your favorite candidates - so they're more likely to apply to your job.
+	    		</h2>
+	    	</div>
+	    </div>
+
+	     <div class="section">
+	    	
+	    	<div class="work_written"  id="How_it_works_special2_text"data-aos="fade-right">
+	    		<h1 class="work_heading">
+	    			4. Receive Great Candidates
+	    		</h1>
+	    		<h2 class="work_explaination">
+	    			Our smart, easy-to-use dashboard helps you sort, review, and rate your candidates. We learn from your ratings and send you similar applicants to the ones you liked.
+	    		</h2>
+	    	</div>
+	    	<img src="./images/howitworks1.png" class="work_image" id="How_it_works_special2_img"data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">
+	    </div>
+	</div>
+   	<!--Included features-->
+   	<div id="screen_question">
+   		<img src="./images/pexels-ron-lach-7439121.jpg" id="screen_question_img" >
+   		<div id="screen_question_text">
+   			<h1 style="font-size: 38px" data-aos="zoom-in-right">Included Features for Smarter Hiring</h1>
+   			<h1 class="heading_question" data-aos="zoom-in-right">Screening Questions</h1>
+   			<h2 class="answer_question" data-aos="zoom-in-right">Save time and see only the most qualified candidates by adding screening questions to your job post.</h2>
+   			<h1 class="heading_question" data-aos="zoom-in-right">Mobile-Friendly</h1>
+   			<h2 class="answer_question" data-aos="zoom-in-right">Hire on the go! Your job looks great on our #1 rated job search app. Plus, you can review your candidates and more - from anywhere!</h2>
+   			<h1 class="heading_question" data-aos="zoom-in-right">Premium Customer Support</h1>
+   			<h2 class="answer_question" data-aos="zoom-in-right">Need assistance? Call, email, or chat live with a real person who's happy to help you get the most out of Vakarien.</h2>
+   		</div>
+   	</div>
+   	<!--footer-->
+    <div id="footer">
+        <div id="first_footer">
+            <h1 style="font-size: 35px;">We're here to help</h1>
+            <h4 style="color:#9c4668">Visit our Help Center for answers to common questions or contact us directly.</h4>
+            <a href="./feedback/index.html" ><button class="footer_button">Feedback</button></a>
+            <a href="Contact_support.html" ><button class="footer_button" style="margin-left: 20px">Contact Support</button></a>
+            <br>
+            <div style="display:inline-block">
+                <h1>Solution</h1>
+                <a href="Review_story.html" class="link_footer"><h4 class="small_text_footer">Reviews</h4></a>
+                <a href="resume_builder.html" class="link_footer"><h4 class="small_text_footer">Resume</h4></a>
+            </div>
+            <div style="display: inline-block;margin-left: 20px">
+                <h1>Resources</h1>
+                <a href="How_it_works.html" class="link_footer"><h4 class="small_text_footer">How it works</h4></a>
+                <a href="FAQ.html" class="link_footer"><h4 class="small_text_footer">FAQ</h4></a>
+            </div> 
+        </div>
+        <div id="second_footer">
+            
+            <h1>Vakarien</h1>
+            <div id="footer_vakarien">
+                <a href="Open_jobs_Vakarien.html#job_heading" class="link_footer"><h4 class="small_text_footer">Why Vakarien</h4></a>
+                <a href="meet_founders.html" class="link_footer"><h4 class="small_text_footer">Meet The Founders</h4></a>
+                <a href="Failed.html" class="link_footer"><h4 class="small_text_footer">Cookies& privacy</h4></a>
+                </div>
+                <a href="Donate_us.html" ><button class="footer_button">Donate Us</button></a>
+            
+            <div id="contact_icons">
+                <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjlgeDorbzwAhVPDCsKHVF8BJIYABAAGgJzZg&ae=2&ohost=www.google.com&cid=CAESQOD2jimxu7s00ezwY1HM_qBD0C7yH-6Ezk32Mn55FpiS8HLHplRfnSTcs-DkW3zfUdKXhPzSWT5JIjTh7TRHTPY&sig=AOD64_2V5kLYi7mDRCGZIpV5Ww7Q2ntx7Q&q&adurl&ved=2ahUKEwidmtjorbzwAhW0heYKHZaRCQEQ0Qx6BAgGEAE" class="link_footer"><i  id="contact_icon" class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" class="link_footer"><i  id="contact_icon" class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="link_footer"><i  id="contact_icon" class="fab fa-linkedin"></i></a>
+                <a href="https://www.apple.com/in/" class="link_footer"><i  id="contact_icon" class="fab fa-apple"></i></a>
+                <a href="https://twitter.com/?lang=en" class="link_footer"><i  id="contact_icon" class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div style="margin-left: -180px">
+            <img src="./images/footer_human.png" id="footer_image" >
+            
+        </div>
+
+    </div>
+</body>
+
+<script>
+	 AOS.init();
+</script>
+<script >
+        $(document).ready(function(){
+            $(document).bind("contextmenu",function(e){
+  return false;
+    });
+        })
+    </script>
+</html>
